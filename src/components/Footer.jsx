@@ -96,7 +96,7 @@ const Footer = ({ setActivePage }) => (
             </div>
 
             <div className="border-t border-emerald-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-emerald-400">
-                <p>© 2025 Mundada Ayurveda. All rights reserved.</p>
+                <p>© 2025 Mundada Ayurveda Hospital. All rights reserved.</p>
                 <div className="flex gap-4">
                     <Facebook size={20} className="cursor-pointer hover:text-white" />
                     <Instagram size={20} className="cursor-pointer hover:text-white" />
