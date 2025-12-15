@@ -71,15 +71,25 @@ const Footer = ({ setActivePage }) => (
                     <ul className="space-y-3 text-sm">
                         <li className="flex items-start gap-3">
                             <MapPin size={18} className="text-emerald-400 shrink-0 mt-0.5" />
-                            <span>Mundada Ayurveda Hospital,<br />Maharashtra, India</span>
+                            <a
+                                href="https://maps.app.goo.gl/ZEm2G4B4GqBq8eWD9"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-emerald-300 transition-colors"
+                            >
+                                Mundada Ayurveda Hospital,<br />Maharashtra, India
+                            </a>
                         </li>
                         <li className="flex items-center gap-3">
                             <Phone size={18} className="text-emerald-400 shrink-0" />
-                            <span>+91 98765 43210</span>
+                            <div className="flex flex-col">
+                                <a href="tel:+919422171607" className="hover:text-emerald-300 transition-colors">+91 94221 71607</a>
+                                <a href="tel:+919423778570" className="hover:text-emerald-300 transition-colors">+91 94237 78570</a>
+                            </div>
                         </li>
                         <li className="flex items-center gap-3">
                             <Mail size={18} className="text-emerald-400 shrink-0" />
-                            <span>ayurpraphull@yahoo.com</span>
+                            <a href="mailto:prashantayur94@gmail.com" className="hover:text-emerald-300 transition-colors">prashantayur94@gmail.com</a>
                         </li>
                     </ul>
                 </div>

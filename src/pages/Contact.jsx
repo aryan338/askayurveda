@@ -21,7 +21,14 @@ const ContactPage = () => (
                             </div>
                             <div>
                                 <h3 className="font-bold text-gray-900 mb-1">Visit Us</h3>
-                                <p className="text-gray-600">Mundada Ayurveda Hospital<br />Maharashtra, India</p>
+                                <a
+                                    href="https://maps.app.goo.gl/ZEm2G4B4GqBq8eWD9"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-600 hover:text-emerald-600 transition-colors block"
+                                >
+                                    Mundada Ayurveda Hospital<br />Nanded, Maharashtra
+                                </a>
                             </div>
                         </div>
 
@@ -31,7 +38,8 @@ const ContactPage = () => (
                             </div>
                             <div>
                                 <h3 className="font-bold text-gray-900 mb-1">Call Us</h3>
-                                <p className="text-gray-600">+91 98765 43210</p>
+                                <a href="tel:+919422171607" className="text-gray-600 hover:text-emerald-600 transition-colors block">+91 94221 71607</a>
+                                <a href="tel:+919423778570" className="text-gray-600 hover:text-emerald-600 transition-colors block">+91 94237 78570</a>
                                 <p className="text-sm text-gray-400">Mon-Sat, 9am - 7pm</p>
                             </div>
                         </div>
@@ -42,7 +50,7 @@ const ContactPage = () => (
                             </div>
                             <div>
                                 <h3 className="font-bold text-gray-900 mb-1">Email Us</h3>
-                                <p className="text-gray-600">ayurpraphull@yahoo.com</p>
+                                <a href="mailto:prashantayur94@gmail.com" className="text-gray-600 hover:text-emerald-600 transition-colors block">prashantayur94@gmail.com</a>
                             </div>
                         </div>
                     </div>
