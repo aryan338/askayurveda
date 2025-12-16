@@ -77,7 +77,7 @@ const Footer = ({ setActivePage }) => (
                                 rel="noopener noreferrer"
                                 className="hover:text-emerald-300 transition-colors"
                             >
-                                Mundada Ayurveda Hospital,<br />Maharashtra, India
+                                Mundada Ayurveda Hospital,<br />Nanded, Maharashtra
                             </a>
                         </li>
                         <li className="flex items-center gap-3">
