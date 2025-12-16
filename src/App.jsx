@@ -7,10 +7,11 @@ import AyurvedaPage from './pages/Ayurveda';
 import TreatmentsPage from './pages/Treatments';
 import TreatmentDetailPage from './pages/TreatmentDetail';
 import ContactPage from './pages/Contact';
+import GalleryPage from './pages/Gallery';
 import { treatmentData } from './data/treatments';
 
 const App = () => {
-    // activePage can be 'home', 'about', 'treatments', 'contact', or 'treatment-detail-ID'
+    // activePage can be 'home', 'about', 'treatments', 'contact', 'gallery', or 'treatment-detail-ID'
     const [activePage, setActivePage] = useState('home');
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -41,12 +42,13 @@ const App = () => {
             case 'ayurveda': return <AyurvedaPage />;
             case 'treatments': return <TreatmentsPage setActivePage={setActivePage} />;
             case 'contact': return <ContactPage />;
+            case 'gallery': return <GalleryPage />;
             default: return <HomePage setActivePage={setActivePage} />;
         }
     };
 
     return (
-        <div className="font-sans text-gray-900 bg-white min-h-screen flex flex-col">
+        <div className="font-sans text-gray-900 bg-stone-50 min-h-screen flex flex-col">
             <Navbar activePage={activePage} setActivePage={setActivePage} isScrolled={isScrolled} />
 
             <main className="flex-grow">

@@ -10,6 +10,7 @@ const Navbar = ({ activePage, setActivePage, isScrolled }) => {
         { id: 'about', label: 'About Us' },
         { id: 'ayurveda', label: 'Ayurveda' },
         { id: 'treatments', label: 'Treatments' },
+        { id: 'gallery', label: 'Gallery' },
         { id: 'contact', label: 'Contact' },
     ];
 
@@ -19,7 +20,7 @@ const Navbar = ({ activePage, setActivePage, isScrolled }) => {
 
     return (
         <nav
-            className={`fixed w-full z-50 transition-all duration-300 ${!isTransparent ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+            className={`fixed w-full z-50 transition-all duration-300 ${!isTransparent ? 'bg-stone-50/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'
                 }`}
         >
             <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
@@ -74,7 +75,7 @@ const Navbar = ({ activePage, setActivePage, isScrolled }) => {
 
             {/* Mobile Menu Dropdown */}
             {isMenuOpen && (
-                <div className="absolute top-full left-0 w-full bg-white shadow-xl md:hidden flex flex-col p-4 animate-in slide-in-from-top-5">
+                <div className="absolute top-full left-0 w-full bg-stone-50 shadow-xl md:hidden flex flex-col p-4 animate-in slide-in-from-top-5">
                     {navLinks.map((link) => (
                         <button
                             key={link.id}
@@ -82,7 +83,7 @@ const Navbar = ({ activePage, setActivePage, isScrolled }) => {
                                 setActivePage(link.id);
                                 setIsMenuOpen(false);
                             }}
-                            className={`text-left py-3 px-4 rounded-lg font-medium ${activePage.split('-')[0] === link.id ? 'bg-emerald-50 text-emerald-600' : 'text-gray-600'
+                            className={`text-left py-3 px-4 rounded-lg font-medium ${activePage.split('-')[0] === link.id ? 'bg-emerald-100 text-emerald-800' : 'text-gray-600'
                                 }`}
                         >
                             {link.label}

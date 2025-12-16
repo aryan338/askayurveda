@@ -1,28 +1,31 @@
 import React from 'react';
 import { Star, ArrowRight, User, Activity, Heart } from 'lucide-react';
+import Carousel from '../components/Carousel';
 
 const HomePage = ({ setActivePage }) => {
     return (
         <div className="animate-in fade-in duration-500">
             {/* Hero Section */}
-            <section className="relative min-h-[90vh] flex items-center pt-20 bg-emerald-50 overflow-hidden">
+            {/* Hero Section with Carousel */}
+            <section className="relative pt-24 pb-12 bg-stone-50 overflow-hidden">
                 {/* Abstract Background Shapes */}
-                <div className="absolute top-0 right-0 w-2/3 h-full bg-emerald-100/50 rounded-bl-[100px] -z-10 hidden md:block" />
-                <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-emerald-200/20 rounded-tr-[100px] -z-10" />
+                <div className="absolute top-0 right-0 w-2/3 h-full bg-emerald-100/30 rounded-bl-[100px] -z-10 hidden md:block" />
+                <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-emerald-200/10 rounded-tr-[100px] -z-10" />
 
-                <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
-                    <div className="space-y-6">
-                        <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 px-4 py-1.5 rounded-full text-sm font-semibold">
+                <div className="container mx-auto px-4">
+                    <div className="text-center max-w-4xl mx-auto mb-12">
+                        <div className="inline-flex items-center gap-2 bg-emerald-100/80 text-emerald-800 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
                             <Star size={14} className="fill-current" />
                             <span>Authentic Ayurvedic Care</span>
                         </div>
-                        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+                        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
                             Restore Balance to <span className="text-emerald-600">Your Life</span>
                         </h1>
-                        <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                            Ayurveda is not just about treating disease; it's about learning how to live. Experience holistic healing customized to your unique body type.
+                        <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
+                            Ayurveda is not just about treating disease; it's about learning how to live.
+                            Experience holistic healing customized to your unique body type.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <button
                                 onClick={() => setActivePage('contact')}
                                 className="bg-emerald-600 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-emerald-700 transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20"
@@ -38,28 +41,13 @@ const HomePage = ({ setActivePage }) => {
                         </div>
                     </div>
 
-                    <div className="relative">
-                        {/* Image Placeholder: This is where you will insert the URL of your main Hospital Facility photo */}
-                        <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl bg-gray-200 aspect-[4/3]">
-                            <img
-                                src="https://placehold.co/600x400/10B981/ffffff?text=Mundada+Hospital+Facility"
-                                alt="Mundada Ayurveda Hospital Entrance"
-                                className="w-full h-full object-cover"
-                                onError={(e) => e.target.src = 'https://placehold.co/600x400/999/fff?text=Image+Load+Failed'}
-                            />
-                        </div>
-                        {/* Decorative dots */}
-                        <div className="absolute -bottom-6 -left-6 w-24 h-24 grid grid-cols-4 gap-2 opacity-30">
-                            {[...Array(16)].map((_, i) => (
-                                <div key={i} className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
-                            ))}
-                        </div>
-                    </div>
+                    {/* Carousel Component */}
+                    <Carousel />
                 </div>
             </section>
 
             {/* Features / Intro */}
-            <section className="py-20 bg-white">
+            <section className="py-20 bg-stone-50">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Mundada Ayurveda?</h2>

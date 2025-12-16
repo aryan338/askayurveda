@@ -39,7 +39,7 @@ const AyurvedaPage = () => {
     };
 
     return (
-        <div className="pt-24 pb-20 bg-gray-50 min-h-screen">
+        <div className="pt-24 pb-20 bg-transparent min-h-screen">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-2xl mx-auto mb-12">
                     <h1 className="text-4xl font-bold text-gray-900 mb-4">Ayurvedic Wisdom</h1>

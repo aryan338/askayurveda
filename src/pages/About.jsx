@@ -42,7 +42,7 @@ const AboutPage = () => (
                 </div>
             </div>
 
-            <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
+            <div className="bg-emerald-50/30 rounded-3xl p-8 md:p-12">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Our Mission</h3>
                 <div className="grid md:grid-cols-3 gap-8 text-center">
                     <div>
