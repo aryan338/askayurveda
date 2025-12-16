@@ -1,18 +1,17 @@
 import React from 'react';
 
 const GalleryPage = () => {
-    // Placeholder image data - can be replaced with real images later
-    const photos = [
-        { id: 1, src: "https://placehold.co/600x400/10B981/ffffff?text=Treatment+Room+1", alt: "Treatment Room 1" },
-        { id: 2, src: "https://placehold.co/600x400/059669/ffffff?text=Herbal+Medicine", alt: "Herbal Medicines" },
-        { id: 3, src: "https://placehold.co/600x400/047857/ffffff?text=Massage+Therapy", alt: "Massage Therapy" },
-        { id: 4, src: "https://placehold.co/600x400/34D399/ffffff?text=Consultation", alt: "Doctor Consultation" },
-        { id: 5, src: "https://placehold.co/600x400/6EE7B7/ffffff?text=Yoga+Session", alt: "Yoga Session" },
-        { id: 6, src: "https://placehold.co/600x400/A7F3D0/ffffff?text=Main+Entrance", alt: "Hospital Entrance" },
-        { id: 7, src: "https://placehold.co/600x400/065F46/ffffff?text=Panchkarma", alt: "Panchkarma Setup" },
-        { id: 8, src: "https://placehold.co/600x400/064E3B/ffffff?text=Pharmacy", alt: "Pharmacy" },
-        { id: 9, src: "https://placehold.co/600x400/10B981/ffffff?text=Meditation", alt: "Meditation Hall" },
-    ];
+    // Dynamically import all images from the gallery folder
+    // eager: true loads them synchronously so we can use them immediately
+    // as: 'url' gives us the string path to the image
+    const imagesDict = import.meta.glob('../assets/gallery/*.jpg', { eager: true, as: 'url' });
+
+    // Convert dictionary to array of objects
+    const photos = Object.values(imagesDict).map((src, index) => ({
+        id: index,
+        src: src,
+        alt: `Gallery Image ${index + 1}`
+    }));
 
     return (
         <div className="pt-24 pb-20 container mx-auto px-4 md:px-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -34,9 +33,10 @@ const GalleryPage = () => {
                             loading="lazy"
                         />
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                            <span className="text-white opacity-0 group-hover:opacity-100 font-semibold px-4 py-2 bg-emerald-600/90 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            {/* <span className="text-white opacity-0 group-hover:opacity-100 font-semibold px-4 py-2 bg-emerald-600/90 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                                 {photo.alt}
-                            </span>
+                            </span> */}
+                            {/* Commented out caption as we don't have specific names for these images yet */}
                         </div>
                     </div>
                 ))}
