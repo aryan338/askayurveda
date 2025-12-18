@@ -28,23 +28,15 @@ const Navbar = ({ isScrolled }) => {
                 {/* Logo */}
                 <Link
                     to="/"
-                    className="flex items-center gap-2 cursor-pointer"
+                    className="flex items-center cursor-pointer"
                 >
-                    <div className="w-10 h-10 rounded-lg overflow-hidden">
+                    <div className="h-12 md:h-14 rounded-lg overflow-hidden">
                         <img src={logo} alt="Mundada Ayurveda Logo" className="w-full h-full object-contain" />
-                    </div>
-                    <div>
-                        <h1 className={`text-xl font-bold leading-none ${!isTransparent ? 'text-emerald-900' : 'text-emerald-900'}`}>
-                            Mundada
-                        </h1>
-                        <span className={`text-sm tracking-widest uppercase ${!isTransparent ? 'text-emerald-600' : 'text-emerald-700'}`}>
-                            Ayurveda
-                        </span>
                     </div>
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex gap-8">
+                <div className="hidden md:flex gap-8 items-center">
                     {navLinks.map((link) => (
                         <NavLink
                             key={link.id}

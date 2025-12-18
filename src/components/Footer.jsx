@@ -8,12 +8,11 @@ const Footer = () => (
         <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                 <div className="space-y-4">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center">
                         {/* Logo in Footer */}
-                        <div className="w-8 h-8 rounded bg-white p-0.5 overflow-hidden">
-                            <img src={logo} alt="Logo" className="w-full h-full object-contain" />
+                        <div className="h-12 rounded bg-white p-1 overflow-hidden">
+                            <img src={logo} alt="Mundada Ayurveda Logo" className="w-full h-full object-contain" />
                         </div>
-                        <span className="text-xl font-bold text-white">Mundada Ayurveda</span>
                     </div>
                     <p className="text-emerald-200/80 text-sm leading-relaxed">
                         Ancient wisdom for modern wellness. Treating the root cause, not just the symptoms, for a balanced and healthy life.
