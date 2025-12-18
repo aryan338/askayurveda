@@ -8,7 +8,7 @@ const ContactPage = () => (
                 {/* Contact Info */}
                 <div className="space-y-8">
                     <div>
-                        <h1 className="text-4xl font-bold text-gray-900 mb-4">Get in Touch</h1>
+                        <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact</h1>
                         <p className="text-gray-600 text-lg">
                             Whether you need to book an appointment or have a query about our treatments, we are here to help.
                         </p>

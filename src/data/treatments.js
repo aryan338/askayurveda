@@ -1,4 +1,4 @@
-import { Droplet, Moon, Activity, Heart, Sun, User } from 'lucide-react';
+import { Droplet, Moon, Activity, Heart, Sun, User, Eye, Leaf, Sparkles, Feather, Smile, Circle } from 'lucide-react';
 
 export const treatmentData = [
     {
@@ -96,6 +96,150 @@ export const treatmentData = [
                 "Improves mobility and flexibility"
             ],
             process: "Treatment often involves localized oil pooling (Basti), Pinda Sweda (hot poultice massage), and customized internal Vata-pacifying medicines."
+        }
+    },
+    {
+        id: "abhyanga",
+        title: "Abhyanga",
+        desc: "A full-body massage with warm, medicated herbal oils tailored to your dosha.",
+        icon: Sparkles,
+        detailContent: {
+            overview: "Abhyanga is a traditional Ayurvedic full-body massage using warm medicated oils. The oil is chosen based on your body constitution (Prakruti) and current imbalances (Vikruti).",
+            benefits: [
+                "Nourishes the body and prevents aging",
+                "Improves blood circulation and skin texture",
+                "Induces sound sleep and reduces stress",
+                "Pacifies Vata dosha and strengthens muscles"
+            ],
+            process: "Rhythmic massage strokes are applied in the direction of hair growth (Anuloma) for 45-60 minutes, often followed by a steam bath (Swedan)."
+        }
+    },
+    {
+        id: "swedan",
+        title: "Swedan (Steam)",
+        desc: "Herbal steam therapy that induces sweating to release toxins from the body.",
+        icon: Sun, // Using Sun to represent Heat
+        detailContent: {
+            overview: "Swedan is a sudation therapy where the patient is made to sweat using herbal steam. It is usually done after Abhyanga to liquefy toxins and facilitate their removal.",
+            benefits: [
+                "Relieves stiffness and heaviness in the body",
+                "Opens the pores and eliminates toxins",
+                "Improves circulation and reduces inflammation",
+                "Effective for arthritis and muscular pain"
+            ],
+            process: "The patient sits in a steam chamber with their head outside (to keep it cool) while herbal steam envelops the body for 15-20 minutes."
+        }
+    },
+    {
+        id: "netra-tarpana",
+        title: "Netra Tarpana",
+        desc: "Rejuvenating eye therapy using medicated ghee retained over the eyes.",
+        icon: Eye,
+        detailContent: {
+            overview: "Netra Tarpana acts as a powerful rejuvenation therapy for the eyes. It involves retaining warm, medicated ghee over the eyes for a specific duration.",
+            benefits: [
+                "Relieves eye strain, burning, and dryness",
+                "Improves vision and strengthens eye muscles",
+                "Helps in treating dark circles and refractive errors",
+                "Preventative care for computer vision syndrome"
+            ],
+            process: "A dough ring is constructed around the eyes, and warm medicated ghee is gently poured in and retained while the patient blinks intermittently."
+        }
+    },
+    {
+        id: "chakra-vasti",
+        title: "Chakra Vasti",
+        desc: "Localized oil retention therapy focusing on specific energy centers like the navel or heart.",
+        icon: Circle,
+        detailContent: {
+            overview: "Chakra Vasti involves retaining warm medicated oil over a specific chakra or area of the body, such as the Nabhi (navel - Nabhi Vasti) or Hridaya (heart - Hrood Vasti).",
+            benefits: [
+                "Balances the solar plexus and digestion (Nabhi Vasti)",
+                "Strengthens heart muscles and relieves anxiety (Hrood Vasti)",
+                "Releases deep-seated emotions and stress",
+                "Improves local circulation and energy flow"
+            ],
+            process: "A dough dam is built over the target area, and warm oil is poured and kept at a constant temperature for a set period."
+        }
+    },
+    {
+        id: "patra-pinda-sweda",
+        title: "Patra Pinda Sweda",
+        desc: "Hot bolus massage using herbal leaves to treat pain and stiffness.",
+        icon: Leaf,
+        detailContent: {
+            overview: "Also known as Elakizhi, this therapy involves massaging the body with heated boluses (poultices) filled with fried herbal leaves and medicinal ingredients.",
+            benefits: [
+                "Highly effective for joint pain and arthritis",
+                "Relieves sciatica and spondylosis",
+                "Reduces inflammation and stiffness",
+                "Strengthens neuromuscular systems"
+            ],
+            process: "Herbal leaves are fried in oil, tied in cloth boluses, heated, and stamped over the body or painful areas."
+        }
+    },
+    {
+        id: "udvartana",
+        title: "Udvartana",
+        desc: "Exfoliating massage using herbal powders, excellent for weight loss and skin health.",
+        icon: Feather, // Representing lightness
+        detailContent: {
+            overview: "Udvartana is a lymphatic massage where dry herbal powder is rubbed over the body in an upward direction (against hair growth).",
+            benefits: [
+                "Promotes weight loss and reduces cellulite",
+                "Improves skin tone and exfoliates dead skin",
+                "Reduces excess Kapha dosha",
+                "Energizes the body and improves circulation"
+            ],
+            process: "Dry herbal powder is vigorously massaged into the skin for 45 minutes, creating friction and heat."
+        }
+    },
+    {
+        id: "shiroabhyanga",
+        title: "Shiroabhyanga",
+        desc: "Relaxing head massage with herbal oils to relieve stress and improve hair health.",
+        icon: Smile, // Mental well-being
+        detailContent: {
+            overview: "Shiroabhyanga is a traditional Ayurvedic head massage focusing on the marma points of the head, neck, and shoulders.",
+            benefits: [
+                "Drastically reduces stress and headaches",
+                "Prevents hair fall and greying",
+                "Improves quality of sleep",
+                "Nourishes the sense organs"
+            ],
+            process: "Medicated oil is applied to the head and massaged gently into the scalp and neck area."
+        }
+    },
+    {
+        id: "padaabhyanga",
+        title: "Padaabhyanga",
+        desc: "Therapeutic foot massage that relaxes the entire body and improves vision.",
+        icon: User, // Reusing User as we don't have Foot icon, or could use Activity
+        detailContent: {
+            overview: "Ayurveda considers the feet as a map to the whole body. Padaabhyanga activates vital marma points on the soles of the feet.",
+            benefits: [
+                "Relieves insomnia and anxiety",
+                "Improves vision (Netra Prasadana)",
+                "Reduces cracking of heels and foot pain",
+                "Balances Vata dosha"
+            ],
+            process: "Warm oil or ghee is massaged onto the feet, paying special attention to the soles and toes."
+        }
+    },
+    {
+        id: "shiro-basti",
+        title: "Shiro Basti",
+        desc: "Retention of medicated oil on the head using a specialized cap.",
+        icon: Moon, // Cooling/Mental
+        detailContent: {
+            overview: "Shiro Basti is considered the most intensive of the oil treatments for the head. Oil is retained on the head for a prolonged period.",
+            benefits: [
+                "Effective for neurological disorders",
+                "Treats facial paralysis and migraines",
+                "Improves mental clarity and memory",
+                "Nourishes the brain and scalp"
+            ],
+            process: "A tall leather or resin cap is fixed around the head with dough, and warm medicated oil is poured in and held for 30-45 minutes."
         }
     }
 ];

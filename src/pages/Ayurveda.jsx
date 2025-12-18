@@ -35,6 +35,35 @@ const AyurvedaPage = () => {
                 "Predicting susceptibility to diseases",
                 "Deciding the line of treatment"
             ]
+        },
+        elements: {
+            title: "Pancha Mahabhutas (Five Elements)",
+            text: "According to Ayurveda, everything in the universe, including the human body, is composed of five basic elements. These elements combine to form the Doshas.",
+            items: [
+                { title: "Akasha (Space)", desc: "The empty space where everything exists. Associated with sound and hearing.", color: "bg-gray-50 text-gray-800" },
+                { title: "Vayu (Air)", desc: "The energy of movement and kinetic force. Associated with touch.", color: "bg-blue-50 text-blue-800" },
+                { title: "Agni (Fire)", desc: "The energy of light, heat, and transformation. Associated with vision.", color: "bg-orange-50 text-orange-800" },
+                { title: "Jala (Water)", desc: "The energy of liquid and cohesion. Associated with taste.", color: "bg-blue-100 text-blue-900" },
+                { title: "Prithvi (Earth)", desc: "The energy of solidity and structure. Associated with smell.", color: "bg-stone-100 text-stone-800" }
+            ]
+        },
+        physiology: {
+            title: "Body Physiology",
+            text: "The body is maintained by Dhatus (tissues), cleansed by Malas (wastes), and powered by Agni (metabolic fire).",
+            list: [
+                "Sapta Dhatus (7 Tissues): Rasa (Plasma), Rakta (Blood), Mamsa (Muscle), Meda (Fat), Asthi (Bone), Majja (Marrow), Shukra (Reproductive tissue).",
+                "Tri Malas (3 Wastes): Purisha (Feces), Mutra (Urine), Sweda (Sweat). Proper elimination is key to health.",
+                "Agni (Digestive Fire): The biological fire responsible for digestion, absorption, and assimilation. Balanced Agni is the foundation of life."
+            ]
+        },
+        mind: {
+            title: "Trigunas (Mental Qualities)",
+            text: "The mind allows us to think and discern. It is influenced by three qualities (Gunas) that determine our mental and emotional state.",
+            items: [
+                { title: "Sattva", desc: "The quality of balance, harmony, purity, and clarity. Leads to happiness and wisdom.", color: "bg-emerald-100 text-emerald-800" },
+                { title: "Rajas", desc: "The quality of movement, activity, passion, and restlessness. Leads to action but also pain.", color: "bg-red-100 text-red-800" },
+                { title: "Tamas", desc: "The quality of inertia, dullness, darkness, and lethargy. Leads to ignorance and delusion.", color: "bg-gray-100 text-gray-800" }
+            ]
         }
     };
 
@@ -42,7 +71,7 @@ const AyurvedaPage = () => {
         <div className="pt-24 pb-20 bg-transparent min-h-screen">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-2xl mx-auto mb-12">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">Ayurvedic Wisdom</h1>
+                    <h1 className="text-4xl font-bold text-gray-900 mb-4">Ayurveda</h1>
                     <p className="text-gray-600">Explore the ancient science of life and how it applies to you.</p>
                 </div>
 
@@ -67,6 +96,24 @@ const AyurvedaPage = () => {
                                 className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${activeTab === 'prakruti' ? 'bg-emerald-600 text-white' : 'text-emerald-900 hover:bg-emerald-100'}`}
                             >
                                 Prakruti
+                            </button>
+                            <button
+                                onClick={() => setActiveTab('elements')}
+                                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${activeTab === 'elements' ? 'bg-emerald-600 text-white' : 'text-emerald-900 hover:bg-emerald-100'}`}
+                            >
+                                Pancha Mahabhutas
+                            </button>
+                            <button
+                                onClick={() => setActiveTab('physiology')}
+                                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${activeTab === 'physiology' ? 'bg-emerald-600 text-white' : 'text-emerald-900 hover:bg-emerald-100'}`}
+                            >
+                                Physiology (Dhatus/Agni)
+                            </button>
+                            <button
+                                onClick={() => setActiveTab('mind')}
+                                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${activeTab === 'mind' ? 'bg-emerald-600 text-white' : 'text-emerald-900 hover:bg-emerald-100'}`}
+                            >
+                                Trigunas (Mind)
                             </button>
                         </div>
                     </div>
