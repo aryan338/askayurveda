@@ -6,15 +6,14 @@ import logo from '../assets/logo.png';
 const Footer = () => (
     <footer className="bg-emerald-900 text-emerald-100 pt-16 pb-8">
         <div className="container mx-auto px-4 md:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div className="space-y-4">
-                    <div className="flex items-center">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+                <div className="md:col-span-2 space-y-4">
+                    <div className="flex items-center gap-3">
                         {/* Logo in Footer */}
-                        <div className="h-12 rounded bg-white p-1 overflow-hidden">
-                            <img src={logo} alt="Mundada Ayurveda Logo" className="w-full h-full object-contain" />
-                        </div>
+                        <img src={logo} alt="Mundada Ayurveda Logo" className="w-10 h-10 object-contain translate-y-[2px]" />
+                        <span className="text-lg md:text-xl font-bold text-white tracking-normal whitespace-nowrap">Mundada Ayurveda Hospital</span>
                     </div>
-                    <p className="text-emerald-200/80 text-sm leading-relaxed">
+                    <p className="text-emerald-200/80 text-sm leading-relaxed max-w-sm">
                         Ancient wisdom for modern wellness. Treating the root cause, not just the symptoms, for a balanced and healthy life.
                     </p>
                 </div>

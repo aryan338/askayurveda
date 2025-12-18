@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 
 const Navbar = ({ isScrolled }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,11 +28,16 @@ const Navbar = ({ isScrolled }) => {
                 {/* Logo */}
                 <Link
                     to="/"
-                    className="flex items-center cursor-pointer"
+                    className="flex items-center gap-3 cursor-pointer group"
                 >
-                    <div className="h-12 md:h-14 rounded-lg overflow-hidden">
-                        <img src={logo} alt="Mundada Ayurveda Logo" className="w-full h-full object-contain" />
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 ${!isTransparent ? 'bg-emerald-600 shadow-lg shadow-emerald-200' : 'bg-emerald-600/20 backdrop-blur-sm'
+                        }`}>
+                        <img src={logo} alt="Mundada Ayurveda Logo" className="w-7 h-7 object-contain" />
                     </div>
+                    <h1 className={`text-lg md:text-xl font-bold tracking-normal transition-colors duration-300 ${!isTransparent ? 'text-emerald-900' : 'text-emerald-900'
+                        }`}>
+                        Mundada Ayurveda Hospital
+                    </h1>
                 </Link>
 
                 {/* Desktop Menu */}
