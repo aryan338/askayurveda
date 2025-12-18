@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link, Navigate } from 'react-router-dom';
 import { ArrowLeft, Heart, Star, Clock } from 'lucide-react';
 
-const TreatmentDetailPage = ({ treatment, setActivePage }) => {
-    // If no treatment is found, navigate back to the list
+const TreatmentDetailPage = ({ treatment }) => {
+    // If no treatment is found, redirect back to the list
     if (!treatment) {
-        useEffect(() => {
-            setActivePage('treatments');
-        }, [setActivePage]);
-        return null;
+        return <Navigate to="/treatments" replace />;
     }
 
     const Icon = treatment.icon;
@@ -15,12 +13,12 @@ const TreatmentDetailPage = ({ treatment, setActivePage }) => {
     return (
         <div className="pt-24 pb-20 container mx-auto px-4 md:px-6 animate-in fade-in duration-500">
             <div className="max-w-4xl mx-auto">
-                <button
-                    onClick={() => setActivePage('treatments')}
+                <Link
+                    to="/treatments"
                     className="flex items-center gap-2 text-emerald-600 hover:text-emerald-800 font-semibold mb-8 transition-colors"
                 >
                     <ArrowLeft size={18} /> Back to Treatments List
-                </button>
+                </Link>
 
                 <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-emerald-100">
                     <div className="flex items-center gap-4 mb-6">
@@ -67,12 +65,12 @@ const TreatmentDetailPage = ({ treatment, setActivePage }) => {
                             <p className="text-gray-600 leading-relaxed">
                                 {treatment.detailContent.process}
                             </p>
-                            <button
-                                onClick={() => setActivePage('contact')}
-                                className="mt-6 bg-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-600 transition-colors"
+                            <Link
+                                to="/contact"
+                                className="mt-6 bg-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-block"
                             >
                                 Inquire about this Treatment
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

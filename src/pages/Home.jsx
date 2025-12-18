@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Star, ArrowRight, User, Activity, Heart } from 'lucide-react';
 import Carousel from '../components/Carousel';
 
-const HomePage = ({ setActivePage }) => {
+const HomePage = () => {
     return (
         <div className="animate-in fade-in duration-500">
             {/* Hero Section */}
@@ -26,18 +27,18 @@ const HomePage = ({ setActivePage }) => {
                             Experience holistic healing customized to your unique body type.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button
-                                onClick={() => setActivePage('contact')}
+                            <Link
+                                to="/contact"
                                 className="bg-emerald-600 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-emerald-700 transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20"
                             >
                                 Book Appointment <ArrowRight size={18} />
-                            </button>
-                            <button
-                                onClick={() => setActivePage('about')}
+                            </Link>
+                            <Link
+                                to="/about"
                                 className="bg-white text-emerald-900 border border-emerald-200 px-8 py-3.5 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
                             >
                                 Learn More
-                            </button>
+                            </Link>
                         </div>
                     </div>
 
@@ -93,12 +94,12 @@ const HomePage = ({ setActivePage }) => {
                     <p className="text-emerald-100 mb-8 max-w-2xl mx-auto">
                         Online consultations are available. Get a personalized health assessment from the comfort of your home.
                     </p>
-                    <button
-                        onClick={() => setActivePage('contact')}
-                        className="bg-white text-emerald-900 px-8 py-3 rounded-lg font-bold hover:bg-emerald-50 transition-colors shadow-lg"
+                    <Link
+                        to="/contact"
+                        className="bg-white text-emerald-900 px-8 py-3 rounded-lg font-bold hover:bg-emerald-50 transition-colors shadow-lg inline-block"
                     >
                         Schedule Consultation
-                    </button>
+                    </Link>
                 </div>
             </section>
         </div>

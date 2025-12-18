@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/Home';
@@ -10,9 +11,23 @@ import ContactPage from './pages/Contact';
 import GalleryPage from './pages/Gallery';
 import { treatmentData } from './data/treatments';
 
+// Helper component to scroll to top on route change
+const ScrollToTop = () => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+    return null;
+};
+
+const TreatmentDetailWrapper = () => {
+    const { pathname } = useLocation();
+    const treatmentId = pathname.split('/').pop();
+    const selectedTreatment = treatmentData.find(t => t.id === treatmentId);
+    return <TreatmentDetailPage treatment={selectedTreatment} />;
+};
+
 const App = () => {
-    // activePage can be 'home', 'about', 'treatments', 'contact', 'gallery', or 'treatment-detail-ID'
-    const [activePage, setActivePage] = useState('home');
     const [isScrolled, setIsScrolled] = useState(false);
 
     // Handle Scroll for Navbar styling
@@ -24,39 +39,28 @@ const App = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Scroll to top on page change
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [activePage]);
-
-    const renderPage = () => {
-        if (activePage.startsWith('treatment-detail-')) {
-            const treatmentId = activePage.replace('treatment-detail-', '');
-            const selectedTreatment = treatmentData.find(t => t.id === treatmentId);
-            return <TreatmentDetailPage treatment={selectedTreatment} setActivePage={setActivePage} />;
-        }
-
-        switch (activePage) {
-            case 'home': return <HomePage setActivePage={setActivePage} />;
-            case 'about': return <AboutPage />;
-            case 'ayurveda': return <AyurvedaPage />;
-            case 'treatments': return <TreatmentsPage setActivePage={setActivePage} />;
-            case 'contact': return <ContactPage />;
-            case 'gallery': return <GalleryPage />;
-            default: return <HomePage setActivePage={setActivePage} />;
-        }
-    };
-
     return (
-        <div className="font-sans text-gray-900 bg-stone-50 min-h-screen flex flex-col">
-            <Navbar activePage={activePage} setActivePage={setActivePage} isScrolled={isScrolled} />
+        <Router>
+            <ScrollToTop />
+            <div className="font-sans text-gray-900 bg-stone-50 min-h-screen flex flex-col">
+                <Navbar isScrolled={isScrolled} />
 
-            <main className="flex-grow">
-                {renderPage()}
-            </main>
+                <main className="flex-grow">
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/ayurveda" element={<AyurvedaPage />} />
+                        <Route path="/treatments" element={<TreatmentsPage />} />
+                        <Route path="/treatment-detail/:id" element={<TreatmentDetailWrapper />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/gallery" element={<GalleryPage />} />
+                        <Route path="*" element={<HomePage />} />
+                    </Routes>
+                </main>
 
-            <Footer setActivePage={setActivePage} />
-        </div>
+                <Footer />
+            </div>
+        </Router>
     );
 };
 

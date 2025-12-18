@@ -84,7 +84,8 @@ const ContactPage = () => (
                                 <option>General Consultation</option>
                                 <option>Panchkarma Therapy</option>
                                 <option>Skin Treatment</option>
-                                <option>Joint Pain</option>
+                                <option>Joint & Spine Care</option>
+                                <option>Patra Pinda Sweda</option>
                                 <option>Other</option>
                             </select>
                         </div>

@@ -1,13 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { treatmentData } from '../data/treatments';
 
-const TreatmentsPage = ({ setActivePage }) => {
-    // This function changes the active page state to 'treatment-detail-ID'
-    const handleCardClick = (treatmentId) => {
-        setActivePage(`treatment-detail-${treatmentId}`);
-    };
-
+const TreatmentsPage = () => {
     return (
         <div className="pt-24 pb-20 container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
@@ -19,10 +15,10 @@ const TreatmentsPage = ({ setActivePage }) => {
                 {treatmentData.map((t, i) => {
                     const Icon = t.icon; // Get the Icon component
                     return (
-                        <button
+                        <Link
                             key={i}
-                            onClick={() => handleCardClick(t.id)}
-                            className="text-left group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all border border-emerald-50 hover:border-emerald-200 cursor-pointer w-full"
+                            to={`/treatment-detail/${t.id}`}
+                            className="text-left group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all border border-emerald-50 hover:border-emerald-200 cursor-pointer w-full block"
                         >
                             <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                                 <Icon className="w-6 h-6" />
@@ -34,7 +30,7 @@ const TreatmentsPage = ({ setActivePage }) => {
                             <span className="text-emerald-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                                 View Details <ArrowRight size={14} />
                             </span>
-                        </button>
+                        </Link>
                     );
                 })}
             </div>

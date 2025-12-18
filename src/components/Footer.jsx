@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
 import logo from '../assets/logo.jpg';
 
-const Footer = ({ setActivePage }) => (
+const Footer = () => (
     <footer className="bg-emerald-900 text-emerald-100 pt-16 pb-8">
         <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
@@ -22,14 +23,20 @@ const Footer = ({ setActivePage }) => (
                 <div>
                     <h3 className="text-white font-semibold mb-4 text-lg">Quick Links</h3>
                     <ul className="space-y-2">
-                        {['Home', 'About', 'Ayurveda', 'Treatments', 'Contact'].map((item) => (
-                            <li key={item}>
-                                <button
-                                    onClick={() => setActivePage(item.toLowerCase())}
+                        {[
+                            { name: 'Home', path: '/' },
+                            { name: 'About', path: '/about' },
+                            { name: 'Ayurveda', path: '/ayurveda' },
+                            { name: 'Treatments', path: '/treatments' },
+                            { name: 'Contact', path: '/contact' }
+                        ].map((item) => (
+                            <li key={item.name}>
+                                <Link
+                                    to={item.path}
                                     className="hover:text-white transition-colors text-sm"
                                 >
-                                    {item}
-                                </button>
+                                    {item.name}
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -39,29 +46,39 @@ const Footer = ({ setActivePage }) => (
                     <h3 className="text-white font-semibold mb-4 text-lg">Treatments</h3>
                     <ul className="space-y-2 text-sm text-emerald-200/80">
                         <li>
-                            <button onClick={() => setActivePage('treatment-detail-panchkarma')} className="hover:text-white transition-colors text-left">
+                            <Link to="/treatment-detail/panchkarma" className="hover:text-white transition-colors text-left block">
                                 Panchkarma Therapy
-                            </button>
+                            </Link>
                         </li>
                         <li>
-                            <button onClick={() => setActivePage('treatment-detail-shirodhara')} className="hover:text-white transition-colors text-left">
+                            <Link to="/treatment-detail/shirodhara" className="hover:text-white transition-colors text-left block">
                                 Shirodhara
-                            </button>
+                            </Link>
                         </li>
                         <li>
-                            <button onClick={() => setActivePage('treatment-detail-ksharsutra')} className="hover:text-white transition-colors text-left">
+                            <Link to="/treatment-detail/ksharsutra" className="hover:text-white transition-colors text-left block">
                                 Ksharsutra for Fistula
-                            </button>
+                            </Link>
                         </li>
                         <li>
-                            <button onClick={() => setActivePage('treatment-detail-womens-health')} className="hover:text-white transition-colors text-left">
+                            <Link to="/treatment-detail/womens-health" className="hover:text-white transition-colors text-left block">
                                 Women's Health
-                            </button>
+                            </Link>
                         </li>
                         <li>
-                            <button onClick={() => setActivePage('ayurveda')} className="hover:text-white transition-colors text-left">
+                            <Link to="/treatment-detail/joint-spine-care" className="hover:text-white transition-colors text-left block">
+                                Joint & Spine Care
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/treatment-detail/patra-pinda-sweda" className="hover:text-white transition-colors text-left block">
+                                Patra Pinda Sweda
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/ayurveda" className="hover:text-white transition-colors text-left block">
                                 Diet & Lifestyle
-                            </button>
+                            </Link>
                         </li>
                     </ul>
                 </div>

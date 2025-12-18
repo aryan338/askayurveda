@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/logo.jpg';
 
-const Navbar = ({ activePage, setActivePage, isScrolled }) => {
+const Navbar = ({ isScrolled }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
 
     const navLinks = [
-        { id: 'home', label: 'Home' },
-        { id: 'about', label: 'About Us' },
-        { id: 'ayurveda', label: 'Ayurveda' },
-        { id: 'treatments', label: 'Treatments' },
-        { id: 'gallery', label: 'Gallery' },
-        { id: 'contact', label: 'Contact' },
+        { id: 'home', label: 'Home', path: '/' },
+        { id: 'about', label: 'About Us', path: '/about' },
+        { id: 'ayurveda', label: 'Ayurveda', path: '/ayurveda' },
+        { id: 'treatments', label: 'Treatments', path: '/treatments' },
+        { id: 'gallery', label: 'Gallery', path: '/gallery' },
+        { id: 'contact', label: 'Contact', path: '/contact' },
     ];
 
     // Logic: Navbar is transparent ONLY if we are at the top of the Home page.
-    // Otherwise (scrolled OR not on home page), it is white with shadow.
-    const isTransparent = activePage === 'home' && !isScrolled;
+    const isTransparent = location.pathname === '/' && !isScrolled;
 
     return (
         <nav
@@ -25,9 +26,9 @@ const Navbar = ({ activePage, setActivePage, isScrolled }) => {
         >
             <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
                 {/* Logo */}
-                <div
+                <Link
+                    to="/"
                     className="flex items-center gap-2 cursor-pointer"
-                    onClick={() => setActivePage('home')}
                 >
                     <div className="w-10 h-10 rounded-lg overflow-hidden">
                         <img src={logo} alt="Mundada Ayurveda Logo" className="w-full h-full object-contain" />
@@ -40,28 +41,31 @@ const Navbar = ({ activePage, setActivePage, isScrolled }) => {
                             Ayurveda
                         </span>
                     </div>
-                </div>
+                </Link>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex gap-8">
                     {navLinks.map((link) => (
-                        <button
+                        <NavLink
                             key={link.id}
-                            onClick={() => setActivePage(link.id)}
-                            className={`font-medium transition-colors hover:text-emerald-500 ${activePage.split('-')[0] === link.id
-                                ? 'text-emerald-600'
-                                : !isTransparent ? 'text-gray-600' : 'text-emerald-800'
-                                }`}
+                            to={link.path}
+                            className={({ isActive }) => {
+                                const isTreatmentsActive = link.id === 'treatments' && location.pathname.startsWith('/treatments');
+                                return `font-medium transition-colors hover:text-emerald-500 ${isActive || isTreatmentsActive
+                                    ? 'text-emerald-600'
+                                    : !isTransparent ? 'text-gray-600' : 'text-emerald-800'
+                                    }`;
+                            }}
                         >
                             {link.label}
-                        </button>
+                        </NavLink>
                     ))}
-                    <button
-                        onClick={() => setActivePage('contact')}
+                    <Link
+                        to="/contact"
                         className="bg-emerald-600 text-white px-5 py-2 rounded-full font-medium hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-emerald-500/30"
                     >
                         Book Consult
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -77,27 +81,26 @@ const Navbar = ({ activePage, setActivePage, isScrolled }) => {
             {isMenuOpen && (
                 <div className="absolute top-full left-0 w-full bg-stone-50 shadow-xl md:hidden flex flex-col p-4 animate-in slide-in-from-top-5">
                     {navLinks.map((link) => (
-                        <button
+                        <NavLink
                             key={link.id}
-                            onClick={() => {
-                                setActivePage(link.id);
-                                setIsMenuOpen(false);
+                            to={link.path}
+                            onClick={() => setIsMenuOpen(false)}
+                            className={({ isActive }) => {
+                                const isTreatmentsActive = link.id === 'treatments' && location.pathname.startsWith('/treatments');
+                                return `text-left py-3 px-4 rounded-lg font-medium ${isActive || isTreatmentsActive ? 'bg-emerald-100 text-emerald-800' : 'text-gray-600'
+                                    }`;
                             }}
-                            className={`text-left py-3 px-4 rounded-lg font-medium ${activePage.split('-')[0] === link.id ? 'bg-emerald-100 text-emerald-800' : 'text-gray-600'
-                                }`}
                         >
                             {link.label}
-                        </button>
+                        </NavLink>
                     ))}
-                    <button
-                        onClick={() => {
-                            setActivePage('contact');
-                            setIsMenuOpen(false);
-                        }}
-                        className="mt-4 bg-emerald-600 text-white py-3 rounded-lg font-bold"
+                    <Link
+                        to="/contact"
+                        onClick={() => setIsMenuOpen(false)}
+                        className="mt-4 bg-emerald-600 text-white py-3 rounded-lg font-bold text-center"
                     >
                         Book Consultation
-                    </button>
+                    </Link>
                 </div>
             )}
         </nav>
