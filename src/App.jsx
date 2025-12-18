@@ -31,7 +31,7 @@ const App = () => {
 
     const renderPage = () => {
         if (activePage.startsWith('treatment-detail-')) {
-            const treatmentId = activePage.split('-')[2];
+            const treatmentId = activePage.replace('treatment-detail-', '');
             const selectedTreatment = treatmentData.find(t => t.id === treatmentId);
             return <TreatmentDetailPage treatment={selectedTreatment} setActivePage={setActivePage} />;
         }
