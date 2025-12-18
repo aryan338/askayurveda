@@ -17,7 +17,7 @@ const TreatmentsPage = () => {
                     return (
                         <Link
                             key={i}
-                            to={`/treatment-detail/${t.id}`}
+                            to={`/treatments/${t.id}`}
                             className="text-left group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all border border-emerald-50 hover:border-emerald-200 cursor-pointer w-full block"
                         >
                             <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">

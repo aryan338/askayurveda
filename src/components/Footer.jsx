@@ -46,32 +46,32 @@ const Footer = () => (
                     <h3 className="text-white font-semibold mb-4 text-lg">Treatments</h3>
                     <ul className="space-y-2 text-sm text-emerald-200/80">
                         <li>
-                            <Link to="/treatment-detail/panchkarma" className="hover:text-white transition-colors text-left block">
+                            <Link to="/treatments/panchkarma" className="hover:text-white transition-colors text-left block">
                                 Panchkarma Therapy
                             </Link>
                         </li>
                         <li>
-                            <Link to="/treatment-detail/shirodhara" className="hover:text-white transition-colors text-left block">
+                            <Link to="/treatments/shirodhara" className="hover:text-white transition-colors text-left block">
                                 Shirodhara
                             </Link>
                         </li>
                         <li>
-                            <Link to="/treatment-detail/ksharsutra" className="hover:text-white transition-colors text-left block">
+                            <Link to="/treatments/ksharsutra" className="hover:text-white transition-colors text-left block">
                                 Ksharsutra for Fistula
                             </Link>
                         </li>
                         <li>
-                            <Link to="/treatment-detail/womens-health" className="hover:text-white transition-colors text-left block">
+                            <Link to="/treatments/womens-health" className="hover:text-white transition-colors text-left block">
                                 Women's Health
                             </Link>
                         </li>
                         <li>
-                            <Link to="/treatment-detail/joint-spine-care" className="hover:text-white transition-colors text-left block">
+                            <Link to="/treatments/joint-spine-care" className="hover:text-white transition-colors text-left block">
                                 Joint & Spine Care
                             </Link>
                         </li>
                         <li>
-                            <Link to="/treatment-detail/patra-pinda-sweda" className="hover:text-white transition-colors text-left block">
+                            <Link to="/treatments/patra-pinda-sweda" className="hover:text-white transition-colors text-left block">
                                 Patra Pinda Sweda
                             </Link>
                         </li>
