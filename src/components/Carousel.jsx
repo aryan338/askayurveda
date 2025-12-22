@@ -12,6 +12,11 @@ const Carousel = () => {
     const images = [hosp1, hosp2, hosp3, hosp4, hosp5, hosp6];
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [loadedImages, setLoadedImages] = useState({});
+
+    const handleImageLoad = (index) => {
+        setLoadedImages((prev) => ({ ...prev, [index]: true }));
+    };
 
     const prevSlide = () => {
         const isFirstSlide = currentIndex === 0;
@@ -39,19 +44,29 @@ const Carousel = () => {
     return (
         <div className="max-w-[1400px] w-full m-auto py-4 px-4 relative group">
             {/* Image Container with fixed aspect ratio */}
-            <div className="relative w-full h-[450px] md:h-[650px] rounded-2xl overflow-hidden shadow-2xl bg-stone-200">
+            <div className="relative w-full h-[450px] md:h-[650px] rounded-2xl overflow-hidden shadow-2xl bg-stone-100">
+
+                {/* Skeleton / Loading State */}
+                {!loadedImages[currentIndex] && (
+                    <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-stone-100">
+                        <div className="w-16 h-16 border-4 border-emerald-100 border-t-emerald-600 rounded-full animate-spin mb-4" />
+                        <div className="w-48 h-4 bg-stone-200 rounded-full animate-pulse" />
+                    </div>
+                )}
+
                 {images.map((img, index) => (
                     <img
                         key={index}
                         src={img}
                         alt={`Hospital view ${index + 1}`}
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                        onLoad={() => handleImageLoad(index)}
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${index === currentIndex && loadedImages[index] ? 'opacity-100 z-10' : 'opacity-0 z-0'
                             }`}
                     />
                 ))}
 
                 {/* Overlay gradient for better button visibility */}
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/40 to-transparent z-20" />
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/20 to-transparent z-20" />
 
                 {/* Left Arrow */}
                 <div className="hidden group-hover:block absolute top-[50%] -translate-y-[-50%] left-5 z-30 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer hover:bg-black/40 transition-all">
