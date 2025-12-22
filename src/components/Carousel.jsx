@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+import hosp1 from '../assets/hosp1.jpg';
+import hosp2 from '../assets/hosp2.jpg';
+import hosp3 from '../assets/hosp3.jpg';
+import hosp4 from '../assets/hosp4.jpg';
+import hosp5 from '../assets/hosp5.jpg';
+import hosp6 from '../assets/hosp6.jpg';
+
 const Carousel = () => {
-    const images = [
-        'https://placehold.co/1200x600/10B981/ffffff?text=Mundada+Ayurveda+Center',
-        'https://placehold.co/1200x600/059669/ffffff?text=Traditional+Healing',
-        'https://placehold.co/1200x600/047857/ffffff?text=Peaceful+Environment',
-    ];
+    const images = [hosp1, hosp2, hosp3, hosp4, hosp5, hosp6];
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,26 +37,39 @@ const Carousel = () => {
     }, [currentIndex]);
 
     return (
-        <div className="max-w-[1400px] h-[400px] md:h-[600px] w-full m-auto py-4 px-4 relative group">
-            <div
-                style={{ backgroundImage: `url(${images[currentIndex]})` }}
-                className="w-full h-full rounded-2xl bg-center bg-cover duration-500 shadow-2xl"
-            ></div>
-            {/* Left Arrow */}
-            <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer hover:bg-black/40 transition-all">
-                <ChevronLeft onClick={prevSlide} size={30} />
+        <div className="max-w-[1400px] w-full m-auto py-4 px-4 relative group">
+            {/* Image Container with fixed aspect ratio */}
+            <div className="relative w-full h-[450px] md:h-[650px] rounded-2xl overflow-hidden shadow-2xl bg-stone-200">
+                {images.map((img, index) => (
+                    <img
+                        key={index}
+                        src={img}
+                        alt={`Hospital view ${index + 1}`}
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                            }`}
+                    />
+                ))}
+
+                {/* Overlay gradient for better button visibility */}
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/40 to-transparent z-20" />
+
+                {/* Left Arrow */}
+                <div className="hidden group-hover:block absolute top-[50%] -translate-y-[-50%] left-5 z-30 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer hover:bg-black/40 transition-all">
+                    <ChevronLeft onClick={prevSlide} size={30} />
+                </div>
+                {/* Right Arrow */}
+                <div className="hidden group-hover:block absolute top-[50%] -translate-y-[-50%] right-5 z-30 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer hover:bg-black/40 transition-all">
+                    <ChevronRight onClick={nextSlide} size={30} />
+                </div>
             </div>
-            {/* Right Arrow */}
-            <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer hover:bg-black/40 transition-all">
-                <ChevronRight onClick={nextSlide} size={30} />
-            </div>
+
             {/* Dots */}
-            <div className="flex top-4 justify-center py-2 gap-2 mt-4">
-                {images.map((slide, slideIndex) => (
+            <div className="flex justify-center py-2 gap-2 mt-4">
+                {images.map((_, slideIndex) => (
                     <div
                         key={slideIndex}
                         onClick={() => goToSlide(slideIndex)}
-                        className={`text-2xl cursor-pointer transition-all duration-300 w-3 h-3 rounded-full ${currentIndex === slideIndex ? 'bg-emerald-600 w-6' : 'bg-emerald-300'
+                        className={`text-2xl cursor-pointer transition-all duration-300 h-2.5 rounded-full ${currentIndex === slideIndex ? 'bg-emerald-600 w-8' : 'bg-emerald-300 w-2.5 hover:bg-emerald-400'
                             }`}
                     ></div>
                 ))}
