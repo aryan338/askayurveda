@@ -27,7 +27,7 @@ const ContactPage = () => (
                                     rel="noopener noreferrer"
                                     className="text-gray-600 dark:text-emerald-100/60 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors block"
                                 >
-                                    Mundada Ayurveda Hospital<br />Nanded, Maharashtra
+                                    Mundada Ayurved Hospital,<br />Goverdhan Ghat Road, Vazirabad,<br />Nanded - 431601
                                 </a>
                             </div>
                         </div>

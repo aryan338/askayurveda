@@ -94,7 +94,7 @@ const Footer = () => (
                                 rel="noopener noreferrer"
                                 className="hover:text-emerald-300 transition-colors"
                             >
-                                Mundada Ayurveda Hospital,<br />Nanded, Maharashtra
+                                Mundada Ayurved Hospital,<br />Goverdhan Ghat Road, Vazirabad,<br />Nanded - 431601
                             </a>
                         </li>
                         <li className="flex items-center gap-3">
