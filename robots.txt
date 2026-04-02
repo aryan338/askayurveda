@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aryan338.github.io/askayurveda/sitemap.xml
