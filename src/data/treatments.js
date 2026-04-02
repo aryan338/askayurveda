@@ -41,24 +41,24 @@ export const treatmentData = [
     },
     {
         id: "ksharsutra",
-        title: "Ksharsutra",
-        desc: "A specialized minimal invasive ayurvedic parasurgical procedure for Fistula-in-Ano and Hemorrhoids.",
+        title: "Ksharsutra (Piles & Fistula)",
+        desc: "World-renowned Ayurved solution for Piles, Fistula-in-ano, and Fissures with minimal recurrence.",
         icon: Activity,
         detailContent: {
-            overview: "Ksharsutra is a specialized minimal invasive Ayurvedic parasurgical procedure used mainly for anorectal conditions like Fistula-in-Ano and Hemorrhoids. It involves the use of a medicated thread that cuts and heals the tract simultaneously.",
+            overview: "At Mundada Ayurved Hospital, we are specialists in the Ksharsutra procedure. This is the gold standard for treating Piles, Fistula, and Fissures. By using a specialized medicated thread, we ensure the root cause is addressed with minimal invasiveness and virtually no chance of recurrence.",
             benefits: [
-                "Highly effective for Fistula-in-Ano and Hemorrhoids",
-                "Minimal hospital stay and faster recovery",
-                "Lower recurrence rate compared to traditional surgery",
-                "Minimal tissue damage and less pain"
+                "Permanent cure for complex Fistula and chronic Piles",
+                "Advanced Ayurvedic parasurgical technique",
+                "Fastest recovery with no major surgical cuts",
+                "Safe even for diabetic and high-risk patients"
             ],
-            process: "A medicated thread (Ksharsutra) is inserted into the fistula tract. The thread is changed weekly until the tract is completely cut and healed."
+            process: "The therapy uses a medicated thread changed periodically. This thread naturally cuts and heals the fistula tract, ensuring healthy tissue grows from within."
         }
     },
     {
         id: "womens-health",
-        title: "Women's Health Disorders",
-        desc: "Comprehensive care for Amenorrhoea, Dysmenorrhoea, and Menopausal Syndrome using holistic protocols.",
+        title: "Women's Health & Fertility",
+        desc: "Comprehensive care for fertility, maternity care, and hormonal health through specialized Ayurved protocols.",
         icon: Heart,
         detailContent: {
             overview: "Ayurveda describes woman as the 'mother of religion and culture.' We host specialized management for various epochs of a woman's life—from adolescence (Rajomathi) to menopause (Rajoniwruti). Our focus is on restoring the normal physiological process of menstruation and hormonal balance.",
@@ -169,19 +169,19 @@ export const treatmentData = [
         }
     },
     {
-        id: "hemorrhoids",
-        title: "Hemorrhoids (Piles)",
-        desc: "Ayurvedic management of Piles using Kshar Karma and specific herbal protocols.",
-        icon: Flame,
+        id: "maternity-fertility",
+        title: "Maternity Care & Fertility",
+        desc: "Holistic Ayurved protocols for pre-conception (Garbhasanskar), maternity care, and infertility management.",
+        icon: Baby,
         detailContent: {
-            overview: "Ayurveda provides highly effective treatments for Hemorrhoids (Piles) and Fissures, focusing on digestive health and safe, non-invasive parasurgical procedures.",
+            overview: "Mundada Ayurved Hospital provides comprehensive services for Fertility and Maternity Care. We follow traditional Garbhasanskar protocols to ensure a healthy pregnancy and specialized Ayurved treatments for couples facing infertility issues.",
             benefits: [
-                "Effective treatment for chronic Piles and Fissures",
-                "Minimal pain compared to traditional surgery",
-                "Reduces local inflammation and bleeding",
-                "Focuses on preventing constipation and recurrence"
+                "Natural Fertility treatments for both men and women",
+                "Garbhasanskar for mental and physical well-being of the baby",
+                "Post-delivery care (Sutika Paricharya) for mothers",
+                "Holistic management of PCOD and hormonal imbalances"
             ],
-            process: "Management includes Kshar Karma (medicated cauterization), special Sitz baths, and Vata-pacifying diet with mild herbal laxatives."
+            process: "We combine internal Ayurved medicines with specialized Basti therapies and lifestyle guidance to optimize reproductive health and ensure safe maternity."
         }
     }
 ];

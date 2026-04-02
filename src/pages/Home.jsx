@@ -23,8 +23,7 @@ const HomePage = () => {
                             Restore Balance to <span className="text-emerald-600 dark:text-emerald-400">Your Life</span>
                         </h1>
                         <p className="text-lg text-gray-600 dark:text-emerald-100/70 leading-relaxed max-w-2xl mx-auto mb-8">
-                            Ayurveda is not just about treating disease; it's about learning how to live.
-                            Experience holistic healing customized to your unique body type.
+                            Mundada Ayurved Hospital is Nanded's leading center for authentic Ayurveda treatments. Specialized care for Piles, Fistula, Fertility, and Maternity Care.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a

@@ -106,8 +106,8 @@ const AyurvedaPage = () => {
         <div className="pt-24 pb-20 bg-stone-50 dark:bg-emerald-950 min-h-screen animate-in fade-in duration-500 transition-colors duration-300">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">The Science of Ayurveda</h1>
-                    <p className="text-gray-600 dark:text-emerald-100/70 text-lg">Understand the ancient wisdom that helps us live in harmony with nature.</p>
+                    <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">The Science of Ayurved</h1>
+                    <p className="text-gray-600 dark:text-emerald-100/70 text-lg">Mundada Ayurved Hospital welcomes you to understand the ancient wisdom of Ayurveda that helps us live in harmony with nature.</p>
                     <div className="w-20 h-1.5 bg-emerald-500 mx-auto mt-6 rounded-full shadow-sm" />
                 </div>
 

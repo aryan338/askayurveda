@@ -17,6 +17,26 @@ const ScrollToTop = () => {
     const { pathname } = useLocation();
     useEffect(() => {
         window.scrollTo(0, 0);
+
+        // Dynamic Title Update for SEO
+        const pageTitles = {
+            '/': 'Mundada Ayurved Hospital | Best Ayurvedic Treatments in Nanded',
+            '/about': 'About Us | Expert Doctors at Mundada Ayurved Hospital',
+            '/ayurveda': 'Concept of Ayurveda | Ancient Wisdom for Modern Health',
+            '/treatments': 'Ayurvedic Treatments & Panchkarma in Nanded',
+            '/yoga': 'Yoga for Healthy Living | Wellness Programs',
+            '/gallery': 'Hospital Gallery | Facilities and Environment',
+            '/contact': 'Contact Us | Book Appointment at Mundada Ayurved Hospital',
+        };
+
+        // Handle dynamic treatment detail titles
+        if (pathname.startsWith('/treatments/')) {
+            const treatmentId = pathname.split('/').pop();
+            const titleId = treatmentId.charAt(0).toUpperCase() + treatmentId.slice(1);
+            document.title = `${titleId} Treatment | Mundada Ayurved Hospital`;
+        } else {
+            document.title = pageTitles[pathname] || 'Mundada Ayurved Hospital';
+        }
     }, [pathname]);
     return null;
 };
