@@ -30,6 +30,26 @@ const TreatmentDetailWrapper = () => {
 
 const App = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [theme, setTheme] = useState(() => {
+        // Check for saved theme or system preference
+        const saved = localStorage.getItem('theme');
+        if (saved) return saved;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    });
+
+    // Apply theme changes to document
+    useEffect(() => {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        localStorage.setItem('theme', theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+    };
 
     // Handle Scroll for Navbar styling
     useEffect(() => {
@@ -43,8 +63,8 @@ const App = () => {
     return (
         <Router>
             <ScrollToTop />
-            <div className="font-sans text-gray-900 bg-stone-50 min-h-screen flex flex-col">
-                <Navbar isScrolled={isScrolled} />
+            <div className="font-sans text-gray-900 bg-stone-50 dark:bg-emerald-950 dark:text-emerald-50 min-h-screen flex flex-col transition-colors duration-300">
+                <Navbar isScrolled={isScrolled} theme={theme} toggleTheme={toggleTheme} />
 
                 <main className="flex-grow">
                     <Routes>

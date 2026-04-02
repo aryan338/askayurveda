@@ -43,6 +43,13 @@ const ContactPage = () => (
                                 <p className="text-sm text-gray-400">Mon-Sat: 10am - 2pm, 5pm - 8pm</p>
                                 <p className="text-sm text-gray-400">Sun: Emergencies only</p>
                                 <p className="text-sm text-gray-400">Oncall: Hospital hours</p>
+                                <a
+                                    href="tel:+919422171607"
+                                    className="mt-4 bg-emerald-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-emerald-700 transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg w-full sm:w-auto"
+                                >
+                                    <Phone size={18} fill="currentColor" />
+                                    Call Hospital Now
+                                </a>
                             </div>
                         </div>
 
