@@ -61,41 +61,45 @@ const ContactPage = () => (
                 {/* Contact Form */}
                 <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg border-t-4 border-emerald-600">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">Book a Consultation</h2>
-                    <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                    <form
+                        action="https://formspree.io/f/YOUR_FORM_ID"
+                        method="POST"
+                        className="space-y-4"
+                    >
                         <div className="grid md:grid-cols-2 gap-4">
                             <div className="space-y-2">
                                 <label className="text-sm font-semibold text-gray-700">First Name</label>
-                                <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="John" />
+                                <input name="firstName" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="John" />
                             </div>
                             <div className="space-y-2">
                                 <label className="text-sm font-semibold text-gray-700">Last Name</label>
-                                <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="Doe" />
+                                <input name="lastName" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="Doe" />
                             </div>
                         </div>
 
                         <div className="space-y-2">
                             <label className="text-sm font-semibold text-gray-700">Email Address</label>
-                            <input type="email" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="john@example.com" />
+                            <input name="email" type="email" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="john@example.com" />
                         </div>
 
                         <div className="space-y-2">
                             <label className="text-sm font-semibold text-gray-700">Service Needed</label>
-                            <select className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all bg-white">
-                                <option>General Consultation</option>
-                                <option>Panchkarma Therapy</option>
-                                <option>Skin Treatment</option>
-                                <option>Joint & Spine Care</option>
-                                <option>Patra Pinda Sweda</option>
-                                <option>Other</option>
+                            <select name="service" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all bg-white">
+                                <option value="General Consultation">General Consultation</option>
+                                <option value="Panchkarma Therapy">Panchkarma Therapy</option>
+                                <option value="Skin Treatment">Skin Treatment</option>
+                                <option value="Joint & Spine Care">Joint & Spine Care</option>
+                                <option value="Patra Pinda Sweda">Patra Pinda Sweda</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
 
                         <div className="space-y-2">
                             <label className="text-sm font-semibold text-gray-700">Message</label>
-                            <textarea rows="4" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="Briefly describe your health concern..."></textarea>
+                            <textarea name="message" rows="4" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="Briefly describe your health concern..."></textarea>
                         </div>
 
-                        <button className="w-full bg-emerald-600 text-white font-bold py-4 rounded-lg hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-600/20">
+                        <button type="submit" className="w-full bg-emerald-600 text-white font-bold py-4 rounded-lg hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-600/20">
                             Send Message
                         </button>
                     </form>
