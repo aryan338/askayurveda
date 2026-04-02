@@ -170,18 +170,19 @@ export const treatmentData = [
     },
     {
         id: "maternity-fertility",
-        title: "Maternity Care & Fertility",
-        desc: "Holistic Ayurved protocols for pre-conception (Garbhasanskar), maternity care, and infertility management.",
+        title: "Fertility & Maternity Care",
+        desc: "Specialized Ayurved protocols for Male/Female infertility, PCOS, and Garbhasanskar (Maternity care).",
         icon: Baby,
         detailContent: {
-            overview: "Mundada Ayurved Hospital provides comprehensive services for Fertility and Maternity Care. We follow traditional Garbhasanskar protocols to ensure a healthy pregnancy and specialized Ayurved treatments for couples facing infertility issues.",
+            overview: "At Mundada Ayurved Hospital, we offer a holistic approach to reproductive health, inspired by the deep wisdom of askayurveda.in. We address the root causes of fertility issues by balancing the Doshas and nourishing the Shukra Dhatu (reproductive tissues). Our hospital provides dedicated care for both partners to ensure a healthy path to parenthood.",
             benefits: [
-                "Natural Fertility treatments for both men and women",
-                "Garbhasanskar for mental and physical well-being of the baby",
-                "Post-delivery care (Sutika Paricharya) for mothers",
-                "Holistic management of PCOD and hormonal imbalances"
+                "Female Infertility: Management of PCOS, hormonal imbalances, and ovulation disorders",
+                "Male Infertility: Natural protocols for low sperm count and motility issues",
+                "Maternity Care: Garbhasanskar for full-term healthy pregnancy and fetal development",
+                "Support for IVF/IUI: Pre-conception planning to enhance success rates of ART",
+                "Management of recurrent miscarriages through deep tissue detoxification"
             ],
-            process: "We combine internal Ayurved medicines with specialized Basti therapies and lifestyle guidance to optimize reproductive health and ensure safe maternity."
+            process: "Our treatment involves specialized Basti (enema) therapies, internal Ayurved medicines like Ashwagandha and Shatavari, and personalized diet charts. We also offer Sutika Paricharya (post-partum care) to help mothers recover their strength and vitality."
         }
     }
 ];
