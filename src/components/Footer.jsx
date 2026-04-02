@@ -26,6 +26,8 @@ const Footer = () => (
                             { name: 'About', path: '/about' },
                             { name: 'Ayurveda', path: '/ayurveda' },
                             { name: 'Treatments', path: '/treatments' },
+                            { name: 'Yoga', path: '/yoga' },
+                            { name: 'Gallery', path: '/gallery' },
                             { name: 'Contact', path: '/contact' }
                         ].map((item) => (
                             <li key={item.name}>
@@ -55,27 +57,27 @@ const Footer = () => (
                         </li>
                         <li>
                             <Link to="/treatments/ksharsutra" className="hover:text-white transition-colors text-left block">
-                                Ksharsutra for Fistula
+                                Ksharsutra (Piles/Fistula)
                             </Link>
                         </li>
                         <li>
                             <Link to="/treatments/womens-health" className="hover:text-white transition-colors text-left block">
-                                Women's Health
+                                Women's Health Care
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/treatments/fibroids" className="hover:text-white transition-colors text-left block">
+                                Uterine Fibroids
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/treatments/skin-disorders" className="hover:text-white transition-colors text-left block">
+                                Skin Disorders
                             </Link>
                         </li>
                         <li>
                             <Link to="/treatments/joint-spine-care" className="hover:text-white transition-colors text-left block">
                                 Joint & Spine Care
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/treatments/patra-pinda-sweda" className="hover:text-white transition-colors text-left block">
-                                Patra Pinda Sweda
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/ayurveda" className="hover:text-white transition-colors text-left block">
-                                Diet & Lifestyle
                             </Link>
                         </li>
                     </ul>

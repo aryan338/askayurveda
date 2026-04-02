@@ -87,18 +87,67 @@ const HomePage = () => {
                 </div>
             </section>
 
+            {/* Content from Legacy Site: News & Testimonials */}
+            <section className="py-20 bg-stone-100">
+                <div className="container mx-auto px-4 md:px-6">
+                    <div className="grid md:grid-cols-2 gap-12 items-start">
+                        <div className="bg-white p-10 rounded-3xl shadow-sm border border-stone-200">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                                <ArrowRight className="text-emerald-600" /> News & Events
+                            </h3>
+                            <div className="space-y-6">
+                                <div className="border-l-4 border-emerald-500 pl-4 py-2 hover:bg-emerald-50 transition-colors">
+                                    <p className="font-bold text-gray-900 mb-1">Online Consultancy</p>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        Eminent Ayurvedic Doctors provide complimentary online consultation regarding Health & Beauty. Get a head start on your wellness journey.
+                                    </p>
+                                </div>
+                                <div className="border-l-4 border-emerald-500 pl-4 py-2 hover:bg-emerald-50 transition-colors">
+                                    <p className="font-bold text-gray-900 mb-1">New Panchkarma Facility</p>
+                                    <p className="text-sm text-gray-600 leading-relaxed">
+                                        Our expanded rejuvenation center in Nanded is now open, featuring specialized Shirodhara and Basti rooms.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bg-emerald-50 p-10 rounded-3xl shadow-sm border border-emerald-100">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                                <Star className="text-emerald-600" /> Testimonials
+                            </h3>
+                            <div className="italic text-gray-700 leading-relaxed mb-8 text-lg">
+                                "The Panchkarma treatment I received at Mundada Hospital was life-changing. I felt a profound sense of detoxification and mental peace that I hadn't experienced in years."
+                            </div>
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold">
+                                    RJ
+                                </div>
+                                <div>
+                                    <p className="font-bold text-gray-900">Recent Patient</p>
+                                    <p className="text-xs text-gray-500">Chronic Pain Relief Treatment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* CTA Section */}
-            <section className="py-20 bg-emerald-900 text-white text-center">
-                <div className="container mx-auto px-4">
+            <section className="py-20 bg-emerald-900 text-white text-center relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+                    <Activity className="absolute top-10 left-10 w-48 h-48" />
+                    <Activity className="absolute bottom-10 right-10 w-64 h-64" />
+                </div>
+                <div className="container mx-auto px-4 relative z-10">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to start your healing journey?</h2>
-                    <p className="text-emerald-100 mb-8 max-w-2xl mx-auto">
+                    <p className="text-emerald-100 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
                         Online consultations are available. Get a personalized health assessment from the comfort of your home.
                     </p>
                     <Link
                         to="/contact"
-                        className="bg-white text-emerald-900 px-8 py-3 rounded-lg font-bold hover:bg-emerald-50 transition-colors shadow-lg inline-block"
+                        className="bg-white text-emerald-900 px-10 py-4 rounded-full font-bold hover:bg-emerald-50 transition-all shadow-xl inline-block hover:scale-105 active:scale-95"
                     >
-                        Schedule Consultation
+                        Schedule Your Consultation
                     </Link>
                 </div>
             </section>

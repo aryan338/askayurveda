@@ -12,6 +12,7 @@ const Navbar = ({ isScrolled }) => {
         { id: 'about', label: 'About Us', path: '/about' },
         { id: 'ayurveda', label: 'Ayurveda', path: '/ayurveda' },
         { id: 'treatments', label: 'Treatments', path: '/treatments' },
+        { id: 'yoga', label: 'Yoga', path: '/yoga' },
         { id: 'gallery', label: 'Gallery', path: '/gallery' },
         { id: 'contact', label: 'Contact', path: '/contact' },
     ];

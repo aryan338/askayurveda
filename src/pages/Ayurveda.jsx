@@ -1,150 +1,185 @@
 import React, { useState } from 'react';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Sun, Moon, Wind, Flame, Star, Activity, Heart, Shield, Apple, Brain } from 'lucide-react';
 
 const AyurvedaPage = () => {
     const [activeTab, setActiveTab] = useState('principles');
 
     const content = {
         principles: {
-            title: "Core Principles",
-            text: "Ayurveda is based on the theory of Tridosha. Health exists when there is a balance between these three fundamental bodily bio-elements or doshas called Vata, Pitta, and Kapha.",
-            items: [
-                { title: "Vata", desc: "Energy of movement. Governs breathing, blinking, muscle and tissue movement, pulsation of the heart.", color: "bg-blue-100 text-blue-800" },
-                { title: "Pitta", desc: "Energy of digestion and metabolism. Governs digestion, absorption, assimilation, nutrition, metabolism.", color: "bg-orange-100 text-orange-800" },
-                { title: "Kapha", desc: "Energy of lubrication and structure. Governs the body's structure, growth, and lubrication of joints.", color: "bg-green-100 text-green-800" }
+            title: "Core Principles of Ayurveda",
+            icon: <Star />,
+            text: "Ayurveda is an ancient medical science which teaches us how to be healthy and lead a long and fruitful life. Hundreds of diseases are explained along with causes, symptoms, and remedies based on the Tridosha theory. Health exists when there is a balance between these three fundamental bodily bio-elements: Vata, Pitta, and Kapha.",
+            details: [
+                {
+                    title: "Concept of Tridosha",
+                    desc: "Everything in the universe is composed of five elements (Pancha Mahabhutas). In the human body, these elements combine to form the three Doshas which govern all biological, psychological, and physiopathological functions of the body, mind, and consciousness."
+                },
+                {
+                    title: "Vata (Space + Air)",
+                    desc: "Governs all movement in the body—breathing, heart pulsation, muscle movement, and nerve impulses. When balanced, it promotes creativity and flexibility. When imbalanced, it leads to fear, anxiety, and tremors."
+                },
+                {
+                    title: "Pitta (Fire + Water)",
+                    desc: "Governs digestion, metabolism, and energy production. When balanced, it promotes understanding and intelligence. When imbalanced, it leads to anger, jealousy, and inflammatory conditions."
+                },
+                {
+                    title: "Kapha (Water + Earth)",
+                    desc: "Governs the body's structure, growth, and lubrication. It provides the glue that holds the cells together. When balanced, it expresses love and forgiveness. When imbalanced, it leads to attachment, greed, and congestion."
+                }
             ]
         },
         dincharya: {
             title: "Dincharya (Daily Regimen)",
-            text: "A daily routine is absolutely necessary to bring radical change in body, mind, and consciousness. Dincharya establishes balance in one's constitution.",
+            icon: <Sun />,
+            text: "Ayurveda emphasizes the importance of Dincharya or daily routine as instrumental in the prevention of disease and promotion of ideal health. Following a daily routine brings radical change in body, mind, and consciousness.",
             list: [
-                "Wake up before sunrise (Brahma Muhurta)",
-                "Eliminate natural urges",
-                "Cleanse senses (teeth brushing, tongue scraping, eye washing)",
-                "Oil massage (Abhyanga)",
-                "Exercise (Vyayama) & Yoga",
-                "Bathing and Meditation"
+                { title: "Rising Early", desc: "Rise at Brahma muhurta (4:00 AM - 5:00 AM) to receive the greatest influence of freshness and strength." },
+                { title: "Evacuation", desc: "First thing in the morning, evacuate bowels and bladder naturally to start the day light." },
+                { title: "Dental Care", desc: "Clean teeth with herbal brushes (bitter/astringent) and scrape the tongue to remove Ama (toxins)." },
+                { title: "Oil Massage (Abhyanga)", desc: "Massage with warm herbal oil to delay aging, relieve fatigue, and improve sleep." },
+                { title: "Exercise (Vyayama)", desc: "Perform physical exercise up to half of your capacity to produce lightness and increase Agni." },
+                { title: "Bathing", desc: "Use lukewarm water and herbal powders for rubbing. Bathing improves appetite, strength, and lifespan." }
             ]
         },
         prakruti: {
-            title: "Prakruti (Body Constitution)",
-            text: "Prakruti is your unique physical and psychological nature. It is determined at the time of conception and remains the same throughout life. Understanding your Prakruti helps in:",
-            list: [
-                "Selecting the right diet",
-                "Choosing appropriate lifestyle habits",
-                "Predicting susceptibility to diseases",
-                "Deciding the line of treatment"
+            title: "Prakruti (Your Unique Constitution)",
+            icon: <Activity />,
+            text: "Prakruti is your unique physical and psychological nature, determined at the time of conception. Just as every family has different natures, every individual responds differently to the same environment and food.",
+            details: [
+                {
+                    title: "Three-fold System",
+                    desc: "Prakruti is a result of interaction between Pancha Mahabhutas, Trigunas, and Tri-Doshas. It remains unchanged throughout life."
+                },
+                {
+                    title: "Factors Deciding Prakruti",
+                    desc: "Parental constitution, parents' diet/routine before conception, fertilization time/place, and mother's diet/routine during pregnancy."
+                },
+                {
+                    title: "Why it Matters?",
+                    desc: "Knowing your Prakruti helps in selecting the right diet, appropriate lifestyle habits, and predicting susceptibility to specific diseases."
+                }
             ]
         },
-        elements: {
-            title: "Pancha Mahabhutas (Five Elements)",
-            text: "According to Ayurveda, everything in the universe, including the human body, is composed of five basic elements. These elements combine to form the Doshas.",
-            items: [
-                { title: "Akasha (Space)", desc: "The empty space where everything exists. Associated with sound and hearing.", color: "bg-gray-50 text-gray-800" },
-                { title: "Vayu (Air)", desc: "The energy of movement and kinetic force. Associated with touch.", color: "bg-blue-50 text-blue-800" },
-                { title: "Agni (Fire)", desc: "The energy of light, heat, and transformation. Associated with vision.", color: "bg-orange-50 text-orange-800" },
-                { title: "Jala (Water)", desc: "The energy of liquid and cohesion. Associated with taste.", color: "bg-blue-100 text-blue-900" },
-                { title: "Prithvi (Earth)", desc: "The energy of solidity and structure. Associated with smell.", color: "bg-stone-100 text-stone-800" }
+        diagnosis: {
+            title: "Ayurveda Diagnosis",
+            icon: <Brain />,
+            text: "In Ayurveda, diagnosis is not just identifying the physical abnormality but evaluating the underlying imbalances in the functioning modes of the body.",
+            list: [
+                { title: "Nadi Pariksha", desc: "Pulse diagnosis to understand the status of Doshic balance and organ health." },
+                { title: "Jihwa Pariksha", desc: "Tongue examination to detect the presence of toxins (Ama) and digestive strength." },
+                { title: "Mala-Mutra Pariksha", desc: "Examination of stool and urine to understand metabolism and excretory functions." },
+                { title: "Darshana, Prashna, Sparshana", desc: "Observation, Questioning, and Palpation to get a holistic view of the patient's health." }
             ]
         },
         physiology: {
-            title: "Body Physiology",
-            text: "The body is maintained by Dhatus (tissues), cleansed by Malas (wastes), and powered by Agni (metabolic fire).",
-            list: [
-                "Sapta Dhatus (7 Tissues): Rasa (Plasma), Rakta (Blood), Mamsa (Muscle), Meda (Fat), Asthi (Bone), Majja (Marrow), Shukra (Reproductive tissue).",
-                "Tri Malas (3 Wastes): Purisha (Feces), Mutra (Urine), Sweda (Sweat). Proper elimination is key to health.",
-                "Agni (Digestive Fire): The biological fire responsible for digestion, absorption, and assimilation. Balanced Agni is the foundation of life."
+            title: "Body Physiology (Dhatus & Agni)",
+            icon: <Flame />,
+            text: "The body is maintained by tissues (Dhatus), powered by metabolic fire (Agni), and cleansed by wastes (Malas).",
+            details: [
+                {
+                    title: "Sapta Dhatus (7 Tissues)",
+                    desc: "Rasa (Plasma), Rakta (Blood), Mamsa (Muscle), Meda (Fat), Asthi (Bone), Majja (Marrow), and Shukra (Reproductive tissue). Each nourishes the next."
+                },
+                {
+                    title: "Agni (Digestive Fire)",
+                    desc: "The biological fire responsible for digestion and transformation. Balanced Agni (Sama-Agni) is the core of perfect health."
+                },
+                {
+                    title: "Ojas",
+                    desc: "The pure essence of all tissues, responsible for immunity, vitality, and overall well-being."
+                }
             ]
         },
-        mind: {
-            title: "Trigunas (Mental Qualities)",
-            text: "The mind allows us to think and discern. It is influenced by three qualities (Gunas) that determine our mental and emotional state.",
-            items: [
-                { title: "Sattva", desc: "The quality of balance, harmony, purity, and clarity. Leads to happiness and wisdom.", color: "bg-emerald-100 text-emerald-800" },
-                { title: "Rajas", desc: "The quality of movement, activity, passion, and restlessness. Leads to action but also pain.", color: "bg-red-100 text-red-800" },
-                { title: "Tamas", desc: "The quality of inertia, dullness, darkness, and lethargy. Leads to ignorance and delusion.", color: "bg-gray-100 text-gray-800" }
+        trigunas: {
+            title: "Trigunas (Qualities of Mind)",
+            icon: <Moon />,
+            text: "Ayurveda describes three universal energies that control the psyche and mental state. Balance between these leads to mental peace and clarity.",
+            list: [
+                { title: "Sattva", desc: "Quality of balance, harmony, purity, and clarity. Leads to happiness and spiritual growth." },
+                { title: "Rajas", desc: "Quality of movement, activity, and passion. When excessive, it leads to restlessness and agitation." },
+                { title: "Tamas", desc: "Quality of inertia, dullness, and heaviness. When excessive, it leads to lethargy and delusion." }
             ]
         }
     };
 
     return (
-        <div className="pt-24 pb-20 bg-transparent min-h-screen">
+        <div className="pt-24 pb-20 bg-stone-50 min-h-screen animate-in fade-in duration-500">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center max-w-2xl mx-auto mb-12">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">Ayurveda</h1>
-                    <p className="text-gray-600">Explore the ancient science of life and how it applies to you.</p>
+                <div className="text-center max-w-2xl mx-auto mb-16">
+                    <h1 className="text-4xl font-bold text-gray-900 mb-4">The Science of Ayurveda</h1>
+                    <p className="text-gray-600 text-lg">Understand the ancient wisdom that helps us live in harmony with nature.</p>
+                    <div className="w-20 h-1.5 bg-emerald-500 mx-auto mt-6 rounded-full" />
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden max-w-4xl mx-auto flex flex-col md:flex-row min-h-[500px]">
-                    {/* Sidebar */}
-                    <div className="md:w-64 bg-emerald-50 border-r border-emerald-100 p-4">
-                        <div className="space-y-2">
-                            <button
-                                onClick={() => setActiveTab('principles')}
-                                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${activeTab === 'principles' ? 'bg-emerald-600 text-white' : 'text-emerald-900 hover:bg-emerald-100'}`}
-                            >
-                                The Tridoshas
-                            </button>
-                            <button
-                                onClick={() => setActiveTab('dincharya')}
-                                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${activeTab === 'dincharya' ? 'bg-emerald-600 text-white' : 'text-emerald-900 hover:bg-emerald-100'}`}
-                            >
-                                Dincharya
-                            </button>
-                            <button
-                                onClick={() => setActiveTab('prakruti')}
-                                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${activeTab === 'prakruti' ? 'bg-emerald-600 text-white' : 'text-emerald-900 hover:bg-emerald-100'}`}
-                            >
-                                Prakruti
-                            </button>
-                            <button
-                                onClick={() => setActiveTab('elements')}
-                                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${activeTab === 'elements' ? 'bg-emerald-600 text-white' : 'text-emerald-900 hover:bg-emerald-100'}`}
-                            >
-                                Pancha Mahabhutas
-                            </button>
-                            <button
-                                onClick={() => setActiveTab('physiology')}
-                                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${activeTab === 'physiology' ? 'bg-emerald-600 text-white' : 'text-emerald-900 hover:bg-emerald-100'}`}
-                            >
-                                Physiology (Dhatus/Agni)
-                            </button>
-                            <button
-                                onClick={() => setActiveTab('mind')}
-                                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${activeTab === 'mind' ? 'bg-emerald-600 text-white' : 'text-emerald-900 hover:bg-emerald-100'}`}
-                            >
-                                Trigunas (Mind)
-                            </button>
+                <div className="bg-white rounded-3xl shadow-xl border border-emerald-100 overflow-hidden max-w-5xl mx-auto flex flex-col md:flex-row min-h-[600px]">
+                    {/* Sidebar / Tabs */}
+                    <div className="md:w-72 bg-stone-50 border-r border-emerald-100 p-6">
+                        <div className="space-y-3">
+                            {Object.keys(content).map((key) => (
+                                <button
+                                    key={key}
+                                    onClick={() => setActiveTab(key)}
+                                    className={`w-full text-left px-5 py-4 rounded-xl font-bold flex items-center gap-3 transition-all ${activeTab === key
+                                            ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-200 translate-x-2'
+                                            : 'text-gray-600 hover:bg-emerald-50 hover:text-emerald-700'
+                                        }`}
+                                >
+                                    <span className={activeTab === key ? 'text-white' : 'text-emerald-600'}>
+                                        {React.cloneElement(content[key].icon, { size: 20 })}
+                                    </span>
+                                    {content[key].title.split(' (')[0].split(' of ')[0]}
+                                </button>
+                            ))}
+                        </div>
+
+                        <div className="mt-12 p-6 bg-emerald-900 rounded-2xl text-white">
+                            <p className="font-serif italic text-sm opacity-90">
+                                "Health is balance. Ayurveda is the path to that balance."
+                            </p>
                         </div>
                     </div>
 
                     {/* Content Area */}
-                    <div className="flex-1 p-8 md:p-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6">{content[activeTab].title}</h2>
-                        <p className="text-gray-600 leading-relaxed mb-8">{content[activeTab].text}</p>
+                    <div className="flex-1 p-8 md:p-12 overflow-y-auto">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center">
+                                {content[activeTab].icon}
+                            </div>
+                            <h2 className="text-3xl font-bold text-gray-900">{content[activeTab].title}</h2>
+                        </div>
 
-                        {content[activeTab].items && (
+                        <p className="text-gray-600 leading-relaxed text-lg mb-10 border-b border-stone-100 pb-8">
+                            {content[activeTab].text}
+                        </p>
+
+                        {content[activeTab].details && (
                             <div className="grid gap-6">
-                                {content[activeTab].items.map((item, i) => (
-                                    <div key={i} className={`p-6 rounded-xl ${item.color}`}>
-                                        <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                                        <p className="opacity-90 text-sm">{item.desc}</p>
+                                {content[activeTab].details.map((item, i) => (
+                                    <div key={i} className="group p-6 rounded-2xl bg-white border border-stone-100 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all">
+                                        <h3 className="font-bold text-emerald-900 text-lg mb-3 flex items-center gap-2">
+                                            <div className="w-1.5 h-6 bg-emerald-500 rounded-full" />
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-gray-600 leading-relaxed">{item.desc}</p>
                                     </div>
                                 ))}
                             </div>
                         )}
 
                         {content[activeTab].list && (
-                            <ul className="space-y-4">
+                            <div className="grid sm:grid-cols-2 gap-6">
                                 {content[activeTab].list.map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-gray-700">
-                                        <div className="bg-emerald-100 text-emerald-600 rounded-full p-1 mt-0.5">
-                                            <ChevronRight size={16} />
+                                    <div key={i} className="flex gap-4 p-4 rounded-xl bg-stone-50 border border-stone-100 shadow-sm">
+                                        <div className="bg-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold text-xs">
+                                            {i + 1}
                                         </div>
-                                        <span>{item}</span>
-                                    </li>
+                                        <div>
+                                            <h4 className="font-bold text-gray-900 mb-1">{item.title}</h4>
+                                            <p className="text-sm text-gray-500 leading-snug">{item.desc}</p>
+                                        </div>
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
                         )}
                     </div>
                 </div>

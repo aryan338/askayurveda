@@ -1,4 +1,8 @@
-import { Droplet, Moon, Activity, Heart, Sun, User, Eye, Leaf, Sparkles, Feather, Smile, Circle } from 'lucide-react';
+import {
+    Droplet, Moon, Activity, Heart, Sun, User, Eye, Leaf,
+    Sparkles, Feather, Smile, Circle, Shield, Brain, Wind, Flame,
+    Baby, Flower2
+} from 'lucide-react';
 
 export const treatmentData = [
     {
@@ -7,15 +11,15 @@ export const treatmentData = [
         desc: "The five detoxification procedures that cleanse the body of toxins. Includes Vamana, Virechana, Basti, Nasya, and Raktamokshana.",
         icon: Droplet,
         detailContent: {
-            // Detailed content for the Panchkarma page
-            overview: "Panchkarma is a purification and detoxification therapy designed to restore balance to the body's Doshas (Vata, Pitta, Kapha). It is a process that deeply cleanses the body and revitalizes the immune system.",
+            overview: "Panchakarma (the 'five therapies') is Ayurveda's principal purification and detoxification treatment. These therapeutic means of eliminating toxins (Ama) from the body are Vamana, Virechana, Nasya, Basti, and Raktamokshana. This series helps remove deep-rooted toxins caused by stress and illness, balancing the Doshas that govern all biological functions.",
             benefits: [
-                "Eliminates toxins and waste products",
+                "Eliminates deep-rooted toxins and waste products",
                 "Restores the digestive fire (Agni)",
                 "Enhances immunity and longevity",
-                "Improves mental clarity and reduces stress"
+                "Improves mental clarity and reduces stress",
+                "Balances the three Doshas (Vata, Pitta, Kapha)"
             ],
-            process: "The therapy involves three stages: Purva Karma (pre-purification), Pradhana Karma (main purification - the 5 procedures), and Paschat Karma (post-purification)."
+            process: "The therapy involves five main procedures: 1. Vamana (Emesis therapy for Kapha), 2. Virechana (Purgation for Pitta), 3. Basti (Enema for Vata), 4. Nasya (Nasal administration), and 5. Raktamokshana (Blood cleansing). Each is monitored carefully through special diets and pre-purification (Purva Karma) stages."
         }
     },
     {
@@ -24,14 +28,15 @@ export const treatmentData = [
         desc: "A classical and well-established ayurvedic procedure of slowly and steadily dripping medicated oil or other liquids on the forehead.",
         icon: Moon,
         detailContent: {
-            overview: "Shirodhara is a deeply relaxing therapy where warm, medicated liquid is poured continuously over the third eye area. It is highly effective for nervous disorders and stress management.",
+            overview: "Shirodhara is a deeply relaxing therapy where warm, medicated liquid (oil, herbal decoction, or buttermilk) is continuously poured over the forehead for 20-30 minutes. It induces a completely relaxing and rejuvenating mental and physical state, deeply revitalizing the central nervous system.",
             benefits: [
-                "Relieves anxiety, stress, and insomnia",
-                "Improves concentration and memory",
-                "Nourishes hair and scalp",
-                "Balances Vata dosha in the head and neck region"
+                "Relieves anxiety, depression, and hypertension",
+                "Effective for insomnia and stress-related headaches",
+                "Strengthens sensory organs",
+                "Helps in treating facial paralysis and neurological disorders",
+                "Prevents premature graying of hair and hair loss"
             ],
-            process: "The patient lies down, and the therapist gently pours a continuous stream of oil (Taila), buttermilk (Takradhara), or decoction (Kashaya) for 30-45 minutes."
+            process: "The patient lies down, and a specialized apparatus pours a steady stream of warm medicated liquid over the 'third eye' area of the forehead for 30-45 minutes."
         }
     },
     {
@@ -40,30 +45,47 @@ export const treatmentData = [
         desc: "A specialized minimal invasive ayurvedic parasurgical procedure for Fistula-in-Ano and Hemorrhoids.",
         icon: Activity,
         detailContent: {
-            overview: "Ksharsutra therapy involves using a medicated thread to treat anal fistula, providing a safer and less painful alternative to traditional surgery with minimal recurrence.",
+            overview: "Ksharsutra is a specialized minimal invasive Ayurvedic parasurgical procedure used mainly for anorectal conditions like Fistula-in-Ano and Hemorrhoids. It involves the use of a medicated thread that cuts and heals the tract simultaneously.",
             benefits: [
-                "Highly effective treatment for Fistula-in-Ano",
+                "Highly effective for Fistula-in-Ano and Hemorrhoids",
                 "Minimal hospital stay and faster recovery",
-                "Less chance of sphincter damage",
-                "Suitable for recurrent cases"
+                "Lower recurrence rate compared to traditional surgery",
+                "Minimal tissue damage and less pain"
             ],
-            process: "The medicated thread (Ksharsutra) is placed in the tract, which gradually cuts and heals the tract simultaneously over several weeks."
+            process: "A medicated thread (Ksharsutra) is inserted into the fistula tract. The thread is changed weekly until the tract is completely cut and healed."
         }
     },
     {
         id: "womens-health",
-        title: "Women's Health",
-        desc: "Specialized care for disorders including fibroids, hormonal imbalances, and menstrual issues using natural remedies.",
+        title: "Women's Health Disorders",
+        desc: "Comprehensive care for Amenorrhoea, Dysmenorrhoea, and Menopausal Syndrome using holistic protocols.",
         icon: Heart,
         detailContent: {
-            overview: "Ayurveda offers holistic protocols to address common women's health issues, focusing on hormonal balance, reproductive health, and emotional well-being.",
+            overview: "Ayurveda describes woman as the 'mother of religion and culture.' We host specialized management for various epochs of a woman's life—from adolescence (Rajomathi) to menopause (Rajoniwruti). Our focus is on restoring the normal physiological process of menstruation and hormonal balance.",
             benefits: [
-                "Natural management of uterine fibroids",
-                "Regulation of menstrual cycles and PMS",
-                "Support for menopausal symptoms",
-                "Treatments for PCOS and infertility support"
+                "Management of Amenorrhoea (scanty/absent menses)",
+                "Relief from Dysmenorrhoea (painful menstruation)",
+                "Holistic support for Menopausal Syndrome (Hot flashes, mood swings)",
+                "Natural Phyto-estrogen based therapies",
+                "Panchakarma rejuvenation for reproductive health"
             ],
-            process: "Treatment involves internal medicines (herbal decoctions), specific Panchkarma therapies, and essential diet & lifestyle advice."
+            process: "Treatment includes internal herbal preparations (like Ashoka, Shatavari), specialized Basti (enema) therapies, and lifestyle modifications to balance the Apan Vayu."
+        }
+    },
+    {
+        id: "fibroids",
+        title: "Uterine Fibroids",
+        desc: "Specialized Ayurvedic management for uterine fibroids using constitutional remedies and detoxification.",
+        icon: Shield,
+        detailContent: {
+            overview: "Ayurveda manages uterine fibroids by addressing the underlying hormonal imbalance and Kapha-Vata stagnation. Toxin accumulation in the reproductive tissue is identified as the root cause, which irritates tissues into excess growth.",
+            benefits: [
+                "Natural reduction in fibroid size through detoxification",
+                "Relief from heavy menstrual bleeding (Raktapradar)",
+                "Effective Intra-Uterine (Uttare Basti) treatments",
+                "Avoidance of invasive surgeries through Rejuvenation therapy"
+            ],
+            process: "A combination of localized Basti, specialized herbalized oil massage (Snehan), and heat treatments (Swedan) to liquefy and eliminate embedded impurities."
         }
     },
     {
@@ -72,14 +94,14 @@ export const treatmentData = [
         desc: "Holistic treatment for psoriasis, eczema, and acne through blood purification and internal medicines.",
         icon: Sun,
         detailContent: {
-            overview: "Skin problems are often rooted in imbalances of the blood (Rakta) and deep tissues. Ayurvedic treatment aims for deep purification and revitalization.",
+            overview: "Skin problems are often rooted in blood (Rakta) impurities and deep tissue imbalances. Ayurvedic treatment aims for deep purification and revitalization to restore skin health from within.",
             benefits: [
-                "Effective treatment for chronic eczema and psoriasis",
-                "Natural management of acne and rashes",
-                "Blood purification (Rakta Mokshana) therapies",
+                "Effective management of Psoriasis and Eczema",
+                "Natural treatment for Acne and Vitiligo",
+                "Blood purification through Raktamokshana and Virechana",
                 "Improves skin luster and texture naturally"
             ],
-            process: "A combination of specific herbal formulas, medicated local applications, and detoxification processes like Virechana are used."
+            process: "Treatment includes internal blood-purifying herbs, medicated local applications, and detoxification therapies to eliminate the root cause."
         }
     },
     {
@@ -88,14 +110,14 @@ export const treatmentData = [
         desc: "Management of arthritis, spondylosis, and back pain through Kati Basti and other external therapies.",
         icon: User,
         detailContent: {
-            overview: "Ayurveda excels in treating musculoskeletal disorders by reducing inflammation, lubricating joints, and strengthening bones and tissues.",
+            overview: "We specialize in treating musculoskeletal disorders by reducing inflammation, lubricating joints, and strengthening the spine. Ayurveda excels in chronic pain management without invasive procedures.",
             benefits: [
-                "Relief from arthritis and joint stiffness",
-                "Treatment for chronic back and neck pain (Spondylosis)",
-                "External therapies like Kati Basti and Janu Basti",
-                "Improves mobility and flexibility"
+                "Relief from Spondylosis and Sciatica",
+                "Treatment for Arthritis and Joint Stiffness",
+                "Reduction in chronic back and neck pain",
+                "Improved mobility and flexibility"
             ],
-            process: "Treatment often involves localized oil pooling (Basti), Pinda Sweda (hot poultice massage), and customized internal Vata-pacifying medicines."
+            process: "Therapies like Kati Basti (oil retention on the back), Patra Pinda Sweda (hot bolus massage), and Vata-pacifying internal medicines are used."
         }
     },
     {
@@ -104,30 +126,30 @@ export const treatmentData = [
         desc: "A full-body massage with warm, medicated herbal oils tailored to your dosha.",
         icon: Sparkles,
         detailContent: {
-            overview: "Abhyanga is a traditional Ayurvedic full-body massage using warm medicated oils. The oil is chosen based on your body constitution (Prakruti) and current imbalances (Vikruti).",
+            overview: "Abhyanga is the 'mother of all massages,' using warm medicated oils customized to your body type. It naturally harmonizes Mind, Body, and Spirit by nourishing tissues and revitalizing the system.",
             benefits: [
-                "Nourishes the body and prevents aging",
-                "Improves blood circulation and skin texture",
-                "Induces sound sleep and reduces stress",
-                "Pacifies Vata dosha and strengthens muscles"
+                "Increases tissue strength and blood circulation",
+                "Rejuvenates and anti-ages the whole body",
+                "Removes cellulite and beautifies skin",
+                "Induces better sleep and reduces stress"
             ],
-            process: "Rhythmic massage strokes are applied in the direction of hair growth (Anuloma) for 45-60 minutes, often followed by a steam bath (Swedan)."
+            process: "A full-body rhythmic massage is performed for 45-60 minutes, usually followed by a steam herbal bath (Swedan)."
         }
     },
     {
         id: "swedan",
         title: "Swedan (Steam)",
         desc: "Herbal steam therapy that induces sweating to release toxins from the body.",
-        icon: Sun, // Using Sun to represent Heat
+        icon: Sun,
         detailContent: {
-            overview: "Swedan is a sudation therapy where the patient is made to sweat using herbal steam. It is usually done after Abhyanga to liquefy toxins and facilitate their removal.",
+            overview: "Swedan is a sudation therapy where the patient is made to sweat using herbal steam. It flushes the system through the skin and is most effective after Abhyanga.",
             benefits: [
-                "Relieves stiffness and heaviness in the body",
-                "Opens the pores and eliminates toxins",
-                "Improves circulation and reduces inflammation",
-                "Effective for arthritis and muscular pain"
+                "Reduces pain and stiffness in the body",
+                "Eliminates toxins and promotes lightness",
+                "Beautifies the skin and reduces cellulite",
+                "Opens pores to facilitate detoxification"
             ],
-            process: "The patient sits in a steam chamber with their head outside (to keep it cool) while herbal steam envelops the body for 15-20 minutes."
+            process: "The patient sits in a steam chamber while medicated herbal steam envelops the body, usually for 15-20 minutes."
         }
     },
     {
@@ -136,110 +158,30 @@ export const treatmentData = [
         desc: "Rejuvenating eye therapy using medicated ghee retained over the eyes.",
         icon: Eye,
         detailContent: {
-            overview: "Netra Tarpana acts as a powerful rejuvenation therapy for the eyes. It involves retaining warm, medicated ghee over the eyes for a specific duration.",
+            overview: "Netra Tarpana is a specialized treatment where the eyes are bathed in pure medicated ghee. It is essential for modern lifestyle-related eye strain.",
             benefits: [
-                "Relieves eye strain, burning, and dryness",
-                "Improves vision and strengthens eye muscles",
-                "Helps in treating dark circles and refractive errors",
-                "Preventative care for computer vision syndrome"
+                "Relieves eye strain from computer/TV usage",
+                "Corrects refractive errors and improves vision",
+                "Helps prevent early Cataract formation",
+                "Treats Dry Eye Syndrome and Glaucoma"
             ],
-            process: "A dough ring is constructed around the eyes, and warm medicated ghee is gently poured in and retained while the patient blinks intermittently."
+            process: "Medicated ghee is retained over the eyes for 10-15 minutes while the patient blinks, within a dough boundary built around the eye sockets."
         }
     },
     {
-        id: "chakra-vasti",
-        title: "Chakra Vasti",
-        desc: "Localized oil retention therapy focusing on specific energy centers like the navel or heart.",
-        icon: Circle,
+        id: "hemorrhoids",
+        title: "Hemorrhoids (Piles)",
+        desc: "Ayurvedic management of Piles using Kshar Karma and specific herbal protocols.",
+        icon: Flame,
         detailContent: {
-            overview: "Chakra Vasti involves retaining warm medicated oil over a specific chakra or area of the body, such as the Nabhi (navel - Nabhi Vasti) or Hridaya (heart - Hrood Vasti).",
+            overview: "Ayurveda provides highly effective treatments for Hemorrhoids (Piles) and Fissures, focusing on digestive health and safe, non-invasive parasurgical procedures.",
             benefits: [
-                "Balances the solar plexus and digestion (Nabhi Vasti)",
-                "Strengthens heart muscles and relieves anxiety (Hrood Vasti)",
-                "Releases deep-seated emotions and stress",
-                "Improves local circulation and energy flow"
+                "Effective treatment for chronic Piles and Fissures",
+                "Minimal pain compared to traditional surgery",
+                "Reduces local inflammation and bleeding",
+                "Focuses on preventing constipation and recurrence"
             ],
-            process: "A dough dam is built over the target area, and warm oil is poured and kept at a constant temperature for a set period."
-        }
-    },
-    {
-        id: "patra-pinda-sweda",
-        title: "Patra Pinda Sweda",
-        desc: "Hot bolus massage using herbal leaves to treat pain and stiffness.",
-        icon: Leaf,
-        detailContent: {
-            overview: "Also known as Elakizhi, this therapy involves massaging the body with heated boluses (poultices) filled with fried herbal leaves and medicinal ingredients.",
-            benefits: [
-                "Highly effective for joint pain and arthritis",
-                "Relieves sciatica and spondylosis",
-                "Reduces inflammation and stiffness",
-                "Strengthens neuromuscular systems"
-            ],
-            process: "Herbal leaves are fried in oil, tied in cloth boluses, heated, and stamped over the body or painful areas."
-        }
-    },
-    {
-        id: "udvartana",
-        title: "Udvartana",
-        desc: "Exfoliating massage using herbal powders, excellent for weight loss and skin health.",
-        icon: Feather, // Representing lightness
-        detailContent: {
-            overview: "Udvartana is a lymphatic massage where dry herbal powder is rubbed over the body in an upward direction (against hair growth).",
-            benefits: [
-                "Promotes weight loss and reduces cellulite",
-                "Improves skin tone and exfoliates dead skin",
-                "Reduces excess Kapha dosha",
-                "Energizes the body and improves circulation"
-            ],
-            process: "Dry herbal powder is vigorously massaged into the skin for 45 minutes, creating friction and heat."
-        }
-    },
-    {
-        id: "shiroabhyanga",
-        title: "Shiroabhyanga",
-        desc: "Relaxing head massage with herbal oils to relieve stress and improve hair health.",
-        icon: Smile, // Mental well-being
-        detailContent: {
-            overview: "Shiroabhyanga is a traditional Ayurvedic head massage focusing on the marma points of the head, neck, and shoulders.",
-            benefits: [
-                "Drastically reduces stress and headaches",
-                "Prevents hair fall and greying",
-                "Improves quality of sleep",
-                "Nourishes the sense organs"
-            ],
-            process: "Medicated oil is applied to the head and massaged gently into the scalp and neck area."
-        }
-    },
-    {
-        id: "padaabhyanga",
-        title: "Padaabhyanga",
-        desc: "Therapeutic foot massage that relaxes the entire body and improves vision.",
-        icon: User, // Reusing User as we don't have Foot icon, or could use Activity
-        detailContent: {
-            overview: "Ayurveda considers the feet as a map to the whole body. Padaabhyanga activates vital marma points on the soles of the feet.",
-            benefits: [
-                "Relieves insomnia and anxiety",
-                "Improves vision (Netra Prasadana)",
-                "Reduces cracking of heels and foot pain",
-                "Balances Vata dosha"
-            ],
-            process: "Warm oil or ghee is massaged onto the feet, paying special attention to the soles and toes."
-        }
-    },
-    {
-        id: "shiro-basti",
-        title: "Shiro Basti",
-        desc: "Retention of medicated oil on the head using a specialized cap.",
-        icon: Moon, // Cooling/Mental
-        detailContent: {
-            overview: "Shiro Basti is considered the most intensive of the oil treatments for the head. Oil is retained on the head for a prolonged period.",
-            benefits: [
-                "Effective for neurological disorders",
-                "Treats facial paralysis and migraines",
-                "Improves mental clarity and memory",
-                "Nourishes the brain and scalp"
-            ],
-            process: "A tall leather or resin cap is fixed around the head with dough, and warm medicated oil is poured in and held for 30-45 minutes."
+            process: "Management includes Kshar Karma (medicated cauterization), special Sitz baths, and Vata-pacifying diet with mild herbal laxatives."
         }
     }
 ];

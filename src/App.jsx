@@ -9,6 +9,7 @@ import TreatmentsPage from './pages/Treatments';
 import TreatmentDetailPage from './pages/TreatmentDetail';
 import ContactPage from './pages/Contact';
 import GalleryPage from './pages/Gallery';
+import YogaPage from './pages/Yoga';
 import { treatmentData } from './data/treatments';
 
 // Helper component to scroll to top on route change
@@ -54,6 +55,7 @@ const App = () => {
                         <Route path="/treatments/:id" element={<TreatmentDetailWrapper />} />
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path="/gallery" element={<GalleryPage />} />
+                        <Route path="/yoga" element={<YogaPage />} />
                         <Route path="*" element={<HomePage />} />
                     </Routes>
                 </main>
