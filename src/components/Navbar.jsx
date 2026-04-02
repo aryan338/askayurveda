@@ -77,7 +77,7 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-emerald-800"
+                    className="md:hidden text-emerald-800 dark:text-emerald-100"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -96,7 +96,7 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
                                 const isTreatmentsActive = link.id === 'treatments' && location.pathname.startsWith('/treatments');
                                 return `text-left py-3 px-4 rounded-lg font-medium transition-colors ${isActive || isTreatmentsActive
                                     ? 'bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-100'
-                                    : 'text-gray-600 dark:text-emerald-200/70'
+                                    : 'text-gray-600 dark:text-emerald-200/70 hover:bg-emerald-50 dark:hover:bg-emerald-900/30'
                                     }`;
                             }}
                         >
@@ -110,7 +110,7 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
                                 toggleTheme();
                                 setIsMenuOpen(false);
                             }}
-                            className="p-2 bg-emerald-100 dark:bg-emerald-900 rounded-full"
+                            className="p-2 bg-emerald-100 dark:bg-emerald-900/50 rounded-full"
                         >
                             {theme === 'dark' ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} className="text-emerald-800 dark:text-emerald-100" />}
                         </button>

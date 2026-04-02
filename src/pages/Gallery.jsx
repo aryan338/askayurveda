@@ -14,10 +14,10 @@ const GalleryPage = () => {
     }));
 
     return (
-        <div className="pt-24 pb-20 container mx-auto px-4 md:px-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <div className="pt-24 pb-20 container mx-auto px-4 md:px-6 animate-in fade-in slide-in-from-bottom-4 duration-500 transition-colors duration-300">
             <div className="text-center mb-16">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">Gallery</h1>
-                <p className="text-gray-600 max-w-2xl mx-auto">
+                <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Gallery</h1>
+                <p className="text-gray-600 dark:text-emerald-100/70 max-w-2xl mx-auto text-lg">
                     A glimpse into our serene environment and facilities dedicated to your healing.
                 </p>
                 <div className="w-20 h-1.5 bg-emerald-500 mx-auto mt-6 rounded-full" />
@@ -25,7 +25,7 @@ const GalleryPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {photos.map((photo) => (
-                    <div key={photo.id} className="group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-md cursor-pointer bg-white">
+                    <div key={photo.id} className="group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-md cursor-pointer bg-white dark:bg-emerald-900/20 border border-transparent dark:border-emerald-800 transition-all">
                         <img
                             src={photo.src}
                             alt={photo.alt}

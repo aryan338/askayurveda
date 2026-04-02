@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from 'lucide-react'
 import logo from '../assets/logo.png';
 
 const Footer = () => (
-    <footer className="bg-emerald-900 dark:bg-black text-emerald-100 pt-16 pb-8 transition-colors duration-300">
+    <footer className="bg-emerald-900 dark:bg-emerald-950 text-emerald-100 pt-16 pb-8 transition-colors duration-300 border-t dark:border-emerald-900">
         <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
                 <div className="md:col-span-2 space-y-4">
