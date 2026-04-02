@@ -103,7 +103,7 @@ const AyurvedaPage = () => {
     };
 
     return (
-        <div className="pt-24 pb-20 bg-stone-50 dark:bg-emerald-950 min-h-screen animate-in fade-in duration-500 transition-colors duration-300">
+        <div className="pt-28 md:pt-36 pb-20 bg-stone-50 dark:bg-emerald-950 min-h-screen animate-in fade-in duration-500 transition-colors duration-300">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">The Science of Ayurved</h1>

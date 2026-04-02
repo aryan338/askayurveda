@@ -14,7 +14,7 @@ const GalleryPage = () => {
     }));
 
     return (
-        <div className="pt-24 pb-20 container mx-auto px-4 md:px-6 animate-in fade-in slide-in-from-bottom-4 duration-500 transition-colors duration-300">
+        <div className="pt-28 md:pt-36 pb-20 container mx-auto px-4 md:px-6 animate-in fade-in slide-in-from-bottom-4 duration-500 transition-colors duration-300">
             <div className="text-center mb-16">
                 <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Gallery</h1>
                 <p className="text-gray-600 dark:text-emerald-100/70 max-w-2xl mx-auto text-lg">

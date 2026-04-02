@@ -2,7 +2,7 @@ import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
 
 const ContactPage = () => (
-    <div className="pt-24 pb-20 bg-transparent min-h-screen transition-colors duration-300">
+    <div className="pt-28 md:pt-36 pb-20 bg-transparent min-h-screen transition-colors duration-300">
         <div className="container mx-auto px-4 md:px-6">
             <div className="grid lg:grid-cols-2 gap-12">
                 {/* Contact Info */}

@@ -11,7 +11,7 @@ const TreatmentDetailPage = ({ treatment }) => {
     const Icon = treatment.icon;
 
     return (
-        <div className="pt-24 pb-20 container mx-auto px-4 md:px-6 animate-in fade-in duration-500 transition-colors duration-300">
+        <div className="pt-28 md:pt-36 pb-20 container mx-auto px-4 md:px-6 animate-in fade-in duration-500 transition-colors duration-300">
             <div className="max-w-4xl mx-auto">
                 <Link
                     to="/treatments"

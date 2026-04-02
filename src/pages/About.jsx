@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AboutPage = () => (
-    <div className="pt-24 pb-20 container mx-auto px-4 md:px-6 animate-in fade-in slide-in-from-bottom-4 duration-500 transition-colors duration-300">
+    <div className="pt-28 md:pt-36 pb-20 container mx-auto px-4 md:px-6 animate-in fade-in slide-in-from-bottom-4 duration-500 transition-colors duration-300">
         <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
                 <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">About Mundada Ayurveda</h1>

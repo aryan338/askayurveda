@@ -8,7 +8,7 @@ const HomePage = () => {
         <div className="animate-in fade-in duration-500">
             {/* Hero Section */}
             {/* Hero Section with Carousel */}
-            <section className="relative pt-24 pb-12 bg-stone-50 dark:bg-emerald-950 overflow-hidden transition-colors duration-300">
+            <section className="relative pt-28 md:pt-36 pb-12 bg-stone-50 dark:bg-emerald-950 overflow-hidden transition-colors duration-300">
                 {/* Abstract Background Shapes */}
                 <div className="absolute top-0 right-0 w-2/3 h-full bg-emerald-100/30 dark:bg-emerald-900/10 rounded-bl-[100px] -z-10 hidden md:block" />
                 <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-emerald-200/10 dark:bg-emerald-800/10 rounded-tr-[100px] -z-10" />

@@ -32,7 +32,7 @@ const YogaPage = () => {
     ];
 
     return (
-        <div className="pt-24 pb-20 bg-stone-50 dark:bg-emerald-950 min-h-screen transition-colors duration-300">
+        <div className="pt-28 md:pt-36 pb-20 bg-stone-50 dark:bg-emerald-950 min-h-screen transition-colors duration-300">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">

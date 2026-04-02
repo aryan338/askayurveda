@@ -20,10 +20,10 @@ const ScrollToTop = () => {
 
         // Dynamic Title Update for SEO
         const pageTitles = {
-            '/': 'Mundada Ayurved Hospital | Best Ayurvedic Treatments in Nanded',
+            '/': 'Mundada Ayurved Hospital | Best Ayurvedic Treatments in Nanded | मुंडाडा आयुर्वेद',
             '/about': 'About Us | Expert Doctors at Mundada Ayurved Hospital',
             '/ayurveda': 'Concept of Ayurveda | Ancient Wisdom for Modern Health',
-            '/treatments': 'Ayurvedic Treatments & Panchkarma in Nanded',
+            '/treatments': 'Ayurvedic Treatments & Panchkarma in Nanded | पंचकर्म केंद्र',
             '/yoga': 'Yoga for Healthy Living | Wellness Programs',
             '/gallery': 'Hospital Gallery | Facilities and Environment',
             '/contact': 'Contact Us | Book Appointment at Mundada Ayurved Hospital',
@@ -32,10 +32,26 @@ const ScrollToTop = () => {
         // Handle dynamic treatment detail titles
         if (pathname.startsWith('/treatments/')) {
             const treatmentId = pathname.split('/').pop();
-            const titleId = treatmentId.charAt(0).toUpperCase() + treatmentId.slice(1);
-            document.title = `${titleId} Treatment | Mundada Ayurved Hospital`;
+            
+            // Map specific treatments to translated SEO titles
+            const localTitles = {
+                'ksharsutra': 'Ksharsutra (मूळव्याध / बवासीर / भगंदर)',
+                'womens-health': "Women's Health (स्त्री रोग विशेषज्ञ)",
+                'maternity-fertility': 'Fertility & Maternity (वंध्यत्व निवारण)',
+                'panchkarma': 'Panchkarma Therapy (पंचकर्म चिकित्सा)',
+                'shirodhara': 'Shirodhara (शिरोधारा)'
+            };
+            
+            const customTitle = localTitles[treatmentId];
+
+            if (customTitle) {
+                document.title = `${customTitle} | Mundada Ayurved Hospital Nanded`;
+            } else {
+                const titleId = treatmentId.charAt(0).toUpperCase() + treatmentId.slice(1);
+                document.title = `${titleId} Treatment | Mundada Ayurved Hospital Nanded`;
+            }
         } else {
-            document.title = pageTitles[pathname] || 'Mundada Ayurved Hospital';
+            document.title = pageTitles[pathname] || 'Mundada Ayurved Hospital | मुंडाडा आयुर्वेद रुग्णालय';
         }
     }, [pathname]);
     return null;
