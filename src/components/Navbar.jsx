@@ -9,13 +9,12 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
 
     const navLinks = [
         { id: 'home', label: 'Home', path: '/' },
-        { id: 'about', label: 'About Us', path: '/about' },
+        { id: 'about', label: 'About', path: '/about' },
         { id: 'ayurveda', label: 'Ayurveda', path: '/ayurveda' },
         { id: 'fertility', label: 'Fertility', path: '/treatments/maternity-fertility' },
         { id: 'treatments', label: 'Treatments', path: '/treatments' },
         { id: 'gallery', label: 'Gallery', path: '/gallery' },
         { id: 'yoga', label: 'Yoga', path: '/yoga' },
-        { id: 'contact', label: 'Contact', path: '/contact' },
     ];
 
     // Logic: Navbar is transparent ONLY if we are at the top of the Home page.
