@@ -2,30 +2,30 @@ import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
 
 const ContactPage = () => (
-    <div className="pt-24 pb-20 bg-transparent min-h-screen">
+    <div className="pt-24 pb-20 bg-transparent min-h-screen transition-colors duration-300">
         <div className="container mx-auto px-4 md:px-6">
             <div className="grid lg:grid-cols-2 gap-12">
                 {/* Contact Info */}
                 <div className="space-y-8">
                     <div>
-                        <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact</h1>
-                        <p className="text-gray-600 text-lg">
+                        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Contact</h1>
+                        <p className="text-gray-600 dark:text-emerald-100/70 text-lg">
                             Whether you need to book an appointment or have a query about our treatments, we are here to help.
                         </p>
                     </div>
 
-                    <div className="bg-white p-8 rounded-2xl shadow-sm space-y-6">
+                    <div className="bg-white dark:bg-emerald-900/20 p-8 rounded-2xl shadow-sm space-y-6 border border-emerald-50 dark:border-emerald-800">
                         <div className="flex items-start gap-4">
-                            <div className="bg-emerald-100 p-3 rounded-lg text-emerald-600">
+                            <div className="bg-emerald-100 dark:bg-emerald-800 p-3 rounded-lg text-emerald-600 dark:text-emerald-300">
                                 <MapPin size={24} />
                             </div>
                             <div>
-                                <h3 className="font-bold text-gray-900 mb-1">Visit Us</h3>
+                                <h3 className="font-bold text-gray-900 dark:text-white mb-1">Visit Us</h3>
                                 <a
                                     href="https://maps.app.goo.gl/ZEm2G4B4GqBq8eWD9"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-600 hover:text-emerald-600 transition-colors block"
+                                    className="text-gray-600 dark:text-emerald-100/60 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors block"
                                 >
                                     Mundada Ayurveda Hospital<br />Nanded, Maharashtra
                                 </a>
@@ -33,16 +33,16 @@ const ContactPage = () => (
                         </div>
 
                         <div className="flex items-start gap-4">
-                            <div className="bg-emerald-100 p-3 rounded-lg text-emerald-600">
+                            <div className="bg-emerald-100 dark:bg-emerald-800 p-3 rounded-lg text-emerald-600 dark:text-emerald-300">
                                 <Phone size={24} />
                             </div>
                             <div>
-                                <h3 className="font-bold text-gray-900 mb-1">Call Us</h3>
-                                <a href="tel:+919422171607" className="text-gray-600 hover:text-emerald-600 transition-colors block">+91 94221 71607</a>
-                                <a href="tel:+919423778570" className="text-gray-600 hover:text-emerald-600 transition-colors block">+91 94237 78570</a>
-                                <p className="text-sm text-gray-400">Mon-Sat: 10am - 2pm, 5pm - 8pm</p>
-                                <p className="text-sm text-gray-400">Sun: Emergencies only</p>
-                                <p className="text-sm text-gray-400">Oncall: Hospital hours</p>
+                                <h3 className="font-bold text-gray-900 dark:text-white mb-1">Call Us</h3>
+                                <a href="tel:+919422171607" className="text-gray-600 dark:text-emerald-100/60 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors block">+91 94221 71607</a>
+                                <a href="tel:+919423778570" className="text-gray-600 dark:text-emerald-100/60 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors block">+91 94237 78570</a>
+                                <p className="text-sm text-gray-400 dark:text-emerald-100/40">Mon-Sat: 10am - 2pm, 5pm - 8pm</p>
+                                <p className="text-sm text-gray-400 dark:text-emerald-100/40">Sun: Emergencies only</p>
+                                <p className="text-sm text-gray-400 dark:text-emerald-100/40">Oncall: Hospital hours</p>
                                 <a
                                     href="tel:+919422171607"
                                     className="mt-4 bg-emerald-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-emerald-700 transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg w-full sm:w-auto"
@@ -54,20 +54,20 @@ const ContactPage = () => (
                         </div>
 
                         <div className="flex items-start gap-4">
-                            <div className="bg-emerald-100 p-3 rounded-lg text-emerald-600">
+                            <div className="bg-emerald-100 dark:bg-emerald-800 p-3 rounded-lg text-emerald-600 dark:text-emerald-300">
                                 <Mail size={24} />
                             </div>
                             <div>
-                                <h3 className="font-bold text-gray-900 mb-1">Email Us</h3>
-                                <a href="mailto:prashantayur94@gmail.com" className="text-gray-600 hover:text-emerald-600 transition-colors block">prashantayur94@gmail.com</a>
+                                <h3 className="font-bold text-gray-900 dark:text-white mb-1">Email Us</h3>
+                                <a href="mailto:prashantayur94@gmail.com" className="text-gray-600 dark:text-emerald-100/60 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors block">prashantayur94@gmail.com</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {/* Contact Form */}
-                <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg border-t-4 border-emerald-600">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Book a Consultation</h2>
+                <div className="bg-white dark:bg-emerald-900/20 p-8 md:p-10 rounded-2xl shadow-lg border-t-4 border-emerald-600 dark:border-emerald-500">
+                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Book a Consultation</h2>
                     <form
                         action="https://formspree.io/f/YOUR_FORM_ID"
                         method="POST"
@@ -75,23 +75,23 @@ const ContactPage = () => (
                     >
                         <div className="grid md:grid-cols-2 gap-4">
                             <div className="space-y-2">
-                                <label className="text-sm font-semibold text-gray-700">First Name</label>
-                                <input name="firstName" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="John" />
+                                <label className="text-sm font-semibold text-gray-700 dark:text-emerald-100/80">First Name</label>
+                                <input name="firstName" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-emerald-800 bg-white dark:bg-emerald-900/40 text-gray-900 dark:text-emerald-50 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="John" />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-sm font-semibold text-gray-700">Last Name</label>
-                                <input name="lastName" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="Doe" />
+                                <label className="text-sm font-semibold text-gray-700 dark:text-emerald-100/80">Last Name</label>
+                                <input name="lastName" type="text" required className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-emerald-800 bg-white dark:bg-emerald-900/40 text-gray-900 dark:text-emerald-50 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="Doe" />
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm font-semibold text-gray-700">Email Address</label>
-                            <input name="email" type="email" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="john@example.com" />
+                            <label className="text-sm font-semibold text-gray-700 dark:text-emerald-100/80">Email Address</label>
+                            <input name="email" type="email" required className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-emerald-800 bg-white dark:bg-emerald-900/40 text-gray-900 dark:text-emerald-50 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="john@example.com" />
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm font-semibold text-gray-700">Service Needed</label>
-                            <select name="service" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all bg-white">
+                            <label className="text-sm font-semibold text-gray-700 dark:text-emerald-100/80">Service Needed</label>
+                            <select name="service" className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-emerald-800 bg-white dark:bg-emerald-900/40 text-gray-900 dark:text-emerald-50 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all">
                                 <option value="General Consultation">General Consultation</option>
                                 <option value="Panchkarma Therapy">Panchkarma Therapy</option>
                                 <option value="Skin Treatment">Skin Treatment</option>
@@ -102,8 +102,8 @@ const ContactPage = () => (
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm font-semibold text-gray-700">Message</label>
-                            <textarea name="message" rows="4" required className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="Briefly describe your health concern..."></textarea>
+                            <label className="text-sm font-semibold text-gray-700 dark:text-emerald-100/80">Message</label>
+                            <textarea name="message" rows="4" required className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-emerald-800 bg-white dark:bg-emerald-900/40 text-gray-900 dark:text-emerald-50 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="Briefly describe your health concern..."></textarea>
                         </div>
 
                         <button type="submit" className="w-full bg-emerald-600 text-white font-bold py-4 rounded-lg hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-600/20">
