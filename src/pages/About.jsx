@@ -36,12 +36,6 @@ const AboutPage = () => (
                     <p className="text-gray-600 dark:text-emerald-100/70 leading-relaxed">
                         We believe that symptomatic treatment is not enough. Our qualified Ayurvedic doctors work to identify and treat the root cause of your ailment. Through this website, we strive to educate our patients about diet, lifestyle, and herbal remedies that build resistance and promote an active life.
                     </p>
-
-                    <div className="bg-emerald-50 dark:bg-emerald-900/40 p-6 rounded-xl border-l-4 border-emerald-600 dark:border-emerald-500 transition-colors">
-                        <p className="text-emerald-800 dark:text-emerald-100 font-medium italic text-lg leading-relaxed">
-                            "Healing happens when we realign the body with nature's wisdom."
-                        </p>
-                    </div>
                 </div>
             </div>
 
