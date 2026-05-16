@@ -13,7 +13,7 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
         { id: 'home', label: 'Home', path: '/' },
         { id: 'about', label: 'About', path: '/about' },
         { id: 'ayurveda', label: 'Ayurveda', path: '/ayurveda' },
-        { id: 'fertility', label: 'Fertility', path: '/treatments/maternity-fertility' },
+        { id: 'infertility', label: 'Infertility', path: '/treatments/maternity-fertility' },
         { id: 'treatments', label: 'Treatments', path: '/treatments' },
         { id: 'gallery', label: 'Gallery', path: '/gallery' },
         { id: 'yoga', label: 'Yoga', path: '/yoga' },
@@ -41,7 +41,7 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
                             <Phone size={12} />
                             <a href="tel:+919422171607" className="hover:text-emerald-200 transition-colors">+91 94221 71607</a>
                             <span>/</span>
-                            <a href="tel:+919423778570" className="hover:text-emerald-200 transition-colors">+91 94237 78570</a>
+                            <a href="tel:+919423693439" className="hover:text-emerald-200 transition-colors">+91 94236 93439</a>
                         </div>
                     </div>
                     <div className="flex gap-4 items-center">
@@ -87,13 +87,13 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
                                         {link.label}
                                         <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-300" />
                                     </NavLink>
-                                    
+
                                     {/* Dropdown Menu */}
                                     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white dark:bg-emerald-950 rounded-xl shadow-xl shadow-emerald-900/10 border border-emerald-100 dark:border-emerald-900 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-center scale-95 group-hover:scale-100 z-50">
                                         <div className="p-3 grid grid-cols-1 gap-1 max-h-[70vh] overflow-y-auto custom-scrollbar">
                                             {treatmentData.map((trt) => (
-                                                <Link 
-                                                    key={trt.id} 
+                                                <Link
+                                                    key={trt.id}
                                                     to={`/treatments/${trt.id}`}
                                                     className="flex items-center gap-3 p-2 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/40 text-gray-700 dark:text-emerald-100 transition-colors"
                                                 >
@@ -106,7 +106,7 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
                                                 </Link>
                                             ))}
                                             <div className="my-1 border-t border-emerald-100 dark:border-emerald-800/50"></div>
-                                            <Link 
+                                            <Link
                                                 to="/treatments"
                                                 className="text-center text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 p-2"
                                             >
@@ -180,14 +180,14 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
                                         >
                                             {link.label}
                                         </NavLink>
-                                        <button 
+                                        <button
                                             className="p-3 mr-2 text-gray-500 dark:text-emerald-400"
                                             onClick={() => setIsTreatmentsMobileOpen(!isTreatmentsMobileOpen)}
                                         >
                                             <ChevronDown size={20} className={`transform transition-transform ${isTreatmentsMobileOpen ? 'rotate-180' : ''}`} />
                                         </button>
                                     </div>
-                                    
+
                                     {/* Mobile Treatments Dropdown */}
                                     {isTreatmentsMobileOpen && (
                                         <div className="ml-6 mr-4 mb-2 mt-1 flex flex-col border-l-2 border-emerald-100 dark:border-emerald-900/50 pl-4 space-y-2">
@@ -223,7 +223,7 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
                             </NavLink>
                         );
                     })}
-                    
+
                     <div className="mt-4 pt-4 border-t dark:border-emerald-900 flex flex-col gap-3">
                         <div className="flex items-center justify-between px-4">
                             <span className="text-sm font-medium text-gray-500 dark:text-emerald-400">Switch Theme</span>
@@ -237,7 +237,7 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
                                 {theme === 'dark' ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} className="text-emerald-800 dark:text-emerald-100" />}
                             </button>
                         </div>
-                        
+
                         <div className="flex flex-col gap-2 mt-2 px-4 text-sm text-gray-600 dark:text-emerald-300">
                             <div className="flex items-center gap-2">
                                 <Phone size={14} className="text-emerald-600 dark:text-emerald-400" />

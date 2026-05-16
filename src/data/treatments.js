@@ -57,8 +57,8 @@ export const treatmentData = [
     },
     {
         id: "womens-health",
-        title: "Women's Health & Fertility",
-        desc: "Comprehensive care for fertility, maternity care, and hormonal health through specialized Ayurved protocols.",
+        title: "Women's Health & Infertility",
+        desc: "Comprehensive care for infertility, maternity care, and hormonal health through specialized Ayurved protocols.",
         icon: Heart,
         detailContent: {
             overview: "Ayurveda describes woman as the 'mother of religion and culture.' We host specialized management for various epochs of a woman's life—from adolescence (Rajomathi) to menopause (Rajoniwruti). Our focus is on restoring the normal physiological process of menstruation and hormonal balance.",
@@ -170,13 +170,13 @@ export const treatmentData = [
     },
     {
         id: "maternity-fertility",
-        title: "Fertility & Maternity Care",
-        desc: "Specialized Ayurved protocols for Male/Female infertility, PCOS, and Garbhasanskar (Maternity care).",
+        title: "Infertility & Maternity Care",
+        desc: "Specialized Ayurved protocols for Male/Female infertility, PCOD, PMOS (PCOS), and Garbhasanskar (Maternity care).",
         icon: Baby,
         detailContent: {
-            overview: "At Mundada Ayurved Hospital, we offer a holistic approach to reproductive health, inspired by the deep wisdom of askayurveda.in. We address the root causes of fertility issues by balancing the Doshas and nourishing the Shukra Dhatu (reproductive tissues). Our hospital provides dedicated care for both partners to ensure a healthy path to parenthood.",
+            overview: "At Mundada Ayurved Hospital, we offer a holistic approach to reproductive health, inspired by the deep wisdom of askayurveda.in. We address the root causes of infertility by balancing the Doshas and nourishing the Shukra Dhatu (reproductive tissues). Our hospital provides dedicated care for both partners to ensure a healthy path to parenthood.",
             benefits: [
-                "Female Infertility: Management of PCOS, hormonal imbalances, and ovulation disorders",
+                "Female Infertility: Management of PCOD, PMOS, PCOS, hormonal imbalances, and ovulation disorders",
                 "Male Infertility: Natural protocols for low sperm count and motility issues",
                 "Maternity Care: Garbhasanskar for full-term healthy pregnancy and fetal development",
                 "Support for IVF/IUI: Pre-conception planning to enhance success rates of ART",

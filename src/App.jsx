@@ -37,7 +37,7 @@ const ScrollToTop = () => {
             const localTitles = {
                 'ksharsutra': 'Ksharsutra (मूळव्याध / बवासीर / भगंदर)',
                 'womens-health': "Women's Health (स्त्री रोग विशेषज्ञ)",
-                'maternity-fertility': 'Fertility & Maternity (वंध्यत्व निवारण)',
+                'maternity-fertility': 'Infertility & Maternity (वंध्यत्व निवारण)',
                 'panchkarma': 'Panchkarma Therapy (पंचकर्म चिकित्सा)',
                 'shirodhara': 'Shirodhara (शिरोधारा)'
             };

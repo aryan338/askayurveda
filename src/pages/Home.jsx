@@ -23,7 +23,7 @@ const HomePage = () => {
                             Restore Balance to <span className="text-emerald-600 dark:text-emerald-400">Your Life</span>
                         </h1>
                         <p className="text-lg text-gray-600 dark:text-emerald-100/70 leading-relaxed max-w-2xl mx-auto mb-8">
-                            Mundada Ayurved Hospital is Nanded's leading center for authentic Ayurveda treatments. Specialized care for Piles, Fistula, Fertility, and Maternity Care.
+                            Mundada Ayurved Hospital is Nanded's leading center for authentic Ayurveda treatments. Specialized care for Piles, Fistula, Hyperacidity, PCOD, PMOS (PCOS), Infertility, Chronic Cervicitis, Arthritis, Spine Disorders, and Sciatica since 1994.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
@@ -70,7 +70,7 @@ const HomePage = () => {
                             {
                                 icon: <Heart className="w-6 h-6" />,
                                 title: "Holistic Approach",
-                                desc: "Combining herbal remedies, diet (Ahar), and lifestyle (Vihar) for complete health."
+                                desc: "Combining herbal remedies, diet (Ahar), lifestyle (Vihar), Yoga, and meditation for complete health."
                             }
                         ].map((feature, idx) => (
                             <div key={idx} className="bg-emerald-50 dark:bg-emerald-900/40 p-8 rounded-2xl hover:shadow-lg transition-all border border-emerald-100 dark:border-emerald-800 shadow-sm">

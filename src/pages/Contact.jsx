@@ -39,7 +39,7 @@ const ContactPage = () => (
                             <div>
                                 <h3 className="font-bold text-gray-900 dark:text-white mb-1">Call Us</h3>
                                 <a href="tel:+919422171607" className="text-gray-600 dark:text-emerald-100/60 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors block">+91 94221 71607</a>
-                                <a href="tel:+919423778570" className="text-gray-600 dark:text-emerald-100/60 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors block">+91 94237 78570</a>
+                                <a href="tel:+919423693439" className="text-gray-600 dark:text-emerald-100/60 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors block">+91 94236 93439</a>
                                 <p className="text-sm text-gray-400 dark:text-emerald-100/40">Mon-Sat: 10am - 2pm, 5pm - 8pm</p>
                                 <p className="text-sm text-gray-400 dark:text-emerald-100/40">Sun: Emergencies only</p>
                                 <p className="text-sm text-gray-400 dark:text-emerald-100/40">Oncall: Hospital hours</p>
