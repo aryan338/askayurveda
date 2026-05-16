@@ -13,7 +13,6 @@ const Navbar = ({ isScrolled, theme, toggleTheme }) => {
         { id: 'home', label: 'Home', path: '/' },
         { id: 'about', label: 'About', path: '/about' },
         { id: 'ayurveda', label: 'Ayurveda', path: '/ayurveda' },
-        { id: 'infertility', label: 'Infertility', path: '/treatments/maternity-fertility' },
         { id: 'treatments', label: 'Treatments', path: '/treatments' },
         { id: 'gallery', label: 'Gallery', path: '/gallery' },
         { id: 'yoga', label: 'Yoga', path: '/yoga' },
